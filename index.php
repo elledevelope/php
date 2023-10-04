@@ -11,10 +11,12 @@ require './header.php';
 // echo "<h1>CEPPIC PHP</h1>";
 
 
+//------------------------------VARIABLES :
+
 // $variable = 'une variable';
 // $Variable = 'Une Variable'; //differet
 
-// concatenated together and passed as a single argument
+// concatenated together and passed as a single argument :
 // echo $variable . $Variable;
 
 // echo $variable . " " . $Variable;
@@ -27,14 +29,21 @@ require './header.php';
 // echo "$variable . $Variable";
 
 
+//------------------------------CASES :
+
 /* $camelCase = 'une variable en camel case';
 $snake_case = 'une variable en snake case';
 $PascalCase = 'une variable en pascal case'; */
 // $kebab-case  = 'une variable en kebab case'; do not use in php
 
+
+//------------------------------TYPES :
+
 // $nombre = 45; 
 // $nombreDecimale = 10.5;
 // $booleen = false;
+
+//------------------------------PRINT_T AND VAR_DUMP :
 
 // print_r($nombre);        // like console.log
 // var_dump($nombre);       //like console.dir (gives more info: type, ect)
