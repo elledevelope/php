@@ -86,10 +86,10 @@ $tableau = [
 
 
 //------------------------------CONSTANT :
-define('USER', 'Jon Doe'); 
-define('NOTES', [12, 16, 2, 6]);
-define('ONLINE', false);
-define('AGE', 32);
+define('USER', 'Jon Doe'); //constant can be string
+define('NOTES', [12, 16, 2, 6]); //constant can be array
+define('ONLINE', false); //constant can be booleen
+define('AGE', 32); //constant can be number
 
 // echo USER;
 dd(AGE);
