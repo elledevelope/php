@@ -57,11 +57,18 @@ $z = 5;
 // dd($i);
 
 
-$anneeDeNaissance = 1990;
-$age = date("Y") - $anneeDeNaissance;
+// $anneeDeNaissance = 1990;
+// $age = date("Y") - $anneeDeNaissance;
 // dd(date("Y")); //to show the year of a now
-dd($age);
+// dd($age);
 
+
+//Calcule le prix TTC
+$prixHT = 34;
+$tva = 10;
+
+$prixTTC = $prixHT + ($tva * $prixHT) / 100;
+dd($prixTTC);
 
 require './index.view.php';
 ?>
