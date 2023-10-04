@@ -1,7 +1,5 @@
 <?php
-
 include('./header.php');
-
 
 echo "<h1>CEPPIC PHP</h1>";
 ?>
@@ -12,5 +10,4 @@ echo "<h1>CEPPIC PHP</h1>";
 echo "Encore CEPPIC PHP";
 
 include('./footer.php');
-
 ?>
