@@ -7,15 +7,13 @@ require './functions.php';
 
 $titre = 'Operateurs PHP';
 
-require './index.view.php';
-
 $x = 4;
 $y = 2;
 $z = 5;
 
-//---------------------------OPERATEURS :
-/* 
 
+/* 
+---------------------------OPERATEURS :
 +
 -
 *
@@ -23,8 +21,8 @@ $z = 5;
 **
 %
 
-
  */
+
 
 //  $calcul = $x + $y;
 //  dd($calcul);
@@ -38,10 +36,26 @@ $z = 5;
 //  $calcul = $x / $y;
 //  dd($calcul);
 
-// $calcul = $x ** $y;
+// $calcul = $x ** $y;  // cube
 // dd($calcul);
 
-// $calcul = $x % $y;
+// $calcul = $x % $y;  // modulo = le reste de la divistion 
 // dd($calcul);
 
+//  $calcul = ($x + $z) * $y;
+// dd($calcul);
+
+// $x +=5;
+// dd($x);
+
+// $x **=5; // $x + 5
+// dd($x);
+
+
+$i = 0;
+$i++; // $i = $i + 1;  // $i += 1;   --all the same
+dd($i);
+
+
+require './index.view.php';
 ?>
