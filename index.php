@@ -68,7 +68,7 @@ echo "$resultat";
 //  echo "$titre";
 
 
-//ARRAY :
+//------------------------------ARRAY :
 $tableau = array(); //old syntaxe
 $tableau = [
     'groupe', 
@@ -78,11 +78,21 @@ $tableau = [
     [1,2,3, true]
 ];
 
-dbug($tableau);
-dd($tableau); // dd = dbug and die 
+// dbug($tableau);
+// dd($tableau); // dd = dbug and die 
 // die('Script php arrété !!!');
-dbug($titre);
+// dbug($titre);
 
+
+
+//------------------------------CONSTANT :
+define('USER', 'Jon Doe'); 
+define('NOTES', [12, 16, 2, 6]);
+define('ONLINE', false);
+define('AGE', 32);
+
+// echo USER;
+dd(AGE);
 
 
 
