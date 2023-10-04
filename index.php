@@ -26,5 +26,22 @@ $z = 5;
 
  */
 
+//  $calcul = $x + $y;
+//  dd($calcul);
+
+//  $calcul = $x - $y;
+//  dd($calcul);
+
+//  $calcul = $x * $y;
+//  dd($calcul);
+
+//  $calcul = $x / $y;
+//  dd($calcul);
+
+// $calcul = $x ** $y;
+// dd($calcul);
+
+// $calcul = $x % $y;
+// dd($calcul);
 
 ?>
