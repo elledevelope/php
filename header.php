@@ -8,3 +8,10 @@
 </head>
 
 <body>
+
+
+<?php 
+
+$titre = "Un titre";
+
+?>
