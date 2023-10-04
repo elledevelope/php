@@ -5,70 +5,27 @@
 
 require './functions.php';
 
-$titre = 'Operateurs PHP';
-
-$x = 4;
-$y = 2;
-$z = 5;
+$titre = "Tableaux php";
 
 
-/* 
----------------------------OPERATEURS :
-+
--
-*
-/
-**
-%
+// ---------------------TABLEAUX INDECSES :
+$tab1 = [];
 
- */
+$notes = [12, 14, 6, 10];
 
+$tab1[] = 'Janvier';
+$tab1[] = 45;
+$tab1[] = true;
 
-//  $calcul = $x + $y;
-//  dd($calcul);
+array_push($tab1, 'Voiture', 10.5, [45, true, 'Truc']); //add elemets to array
 
-//  $calcul = $x - $y;
-//  dd($calcul);
-
-//  $calcul = $x * $y;
-//  dd($calcul);
-
-//  $calcul = $x / $y;
-//  dd($calcul);
-
-// $calcul = $x ** $y;  // cube
-// dd($calcul);
-
-// $calcul = $x % $y;  // modulo = le reste de la divistion 
-// dd($calcul);
-
-//  $calcul = ($x + $z) * $y;
-// dd($calcul);
-
-// $x +=5;
-// dd($x);
-
-// $x **=5; // $x + 5
-// dd($x);
+$tabFusion = array_merge($tab1,$notes); //merge 2 arrays
 
 
-// $i = 0;
-// $i++; // $i = $i + 1;  // $i += 1;   --all the same
-// dd($i);
+dbug($tabFusion);
 
+dd($tabFusion[5][2]); //shows 2d element in th 5th element
 
-// $anneeDeNaissance = 1990;
-// $age = date("Y") - $anneeDeNaissance;
-// dd(date("Y")); //to show the year of a now
-// dd($age);
-
-
-//Calcule le prix TTC
-$prixHT = 34;
-$tva = 10;
-
-$prixTTC = $prixHT + ($tva * $prixHT) / 100;
-dd($prixTTC);
 
 require './index.view.php';
 ?>
