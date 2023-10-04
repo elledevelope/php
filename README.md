@@ -7,3 +7,7 @@
 [.gitignore - Manual](https://www.toptal.com/developers/gitignore)
 
 [PHP Standards Recommendations](https://www.php-fig.org/)
+
+
+
+// phpinfo(); // gives info about yout php version 
