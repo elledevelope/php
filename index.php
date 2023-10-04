@@ -3,7 +3,7 @@ require './functions.php';
 
 $titre = 'Operateurs PHP';
 
-require './index.view.html';
+require './index.view.php';
 
 
 ?>
