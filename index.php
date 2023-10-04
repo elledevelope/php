@@ -52,9 +52,15 @@ $z = 5;
 // dd($x);
 
 
-$i = 0;
-$i++; // $i = $i + 1;  // $i += 1;   --all the same
-dd($i);
+// $i = 0;
+// $i++; // $i = $i + 1;  // $i += 1;   --all the same
+// dd($i);
+
+
+$anneeDeNaissance = 1990;
+$age = date("Y") - $anneeDeNaissance;
+// dd(date("Y")); //to show the year of a now
+dd($age);
 
 
 require './index.view.php';
