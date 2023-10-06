@@ -29,15 +29,23 @@ dbug($tabFusion); */
 
 // ---------------------TABLEAUX ASSOCIATIFS :
 
-$fruit = [
+$fruits = [
     'banane' => 'jaune',
     'pomme' => 'rouge',
     'kiwi' => 'vert'
 ];
+// dd($fruits['pomme']);  // == call valeur (rouge) of a clé (pomme)  in a tableaux
+
+/* $fruits['poire'] ='vert'; //added new key/valeur to a tableaux
+dd($fruit); */
+
+
+$chaine = implode(",",$fruits); // IMPLODE affiche les valeurs of tableaux and you choose separateur, in this case is ","
+// dd($chaine);
+$fruits2 = explode(",", $chaine);  // EXPLODE is the opposide of IMPLODE 
+dd($fruits2);
 
 
 
-
-
-require './index.view.php';
+// require './index.view.php';
 ?>
