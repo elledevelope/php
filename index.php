@@ -5,34 +5,42 @@
 
 require './functions.php';
 
-$titre = "Boucles (loops) php";
+$titre = "Conditions php";
 
 
-/* $planetes = ['mars', 'terre', 'uranus', 'venus', 'jupiter', 'mercure'];  //=> TABLEAU INDECXE (Indexed Array)
+/* if/else/elseif 
+>
+<
+>=
+<=
+==
+===
+!=
+!==
+*/
 
-$planetes2 = [                      //=>TABLEAU ASSOCIATIF (Associative Array)
-    'm' => 'mars',
-    't' => 'terre',
-    'u' => 'uranus',
-    'v' => 'venus',
-    'j' => 'jupiter',
-    'm' => 'mercure'
-]; */
-
-//Afficher dans une liste ul toutes les donées de ce user avec foreach:
 $user = [
     'nom' => 'Doupet Lucien',
     'email' => 'ldoupe@yaya.com',
     'competance' => ['php', 'react', 'python']
 ];
-dbug($user);
-foreach($user as $key => $value) :    
-    echo $key . ' : ' . $value . '<br>';
-endforeach;
+
+$age = 10;
+if($age >= 18) {
+    echo 'Peut voter';
+};
+// Another syntaxe:
+$age = 10;
+if($age >= 18) :
+    echo 'Peut voter';
+endif;
 
 
 
 
 
 
-require './index.view.php';
+
+
+
+// require './index.view.php';
