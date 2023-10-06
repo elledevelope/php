@@ -8,7 +8,7 @@ require './functions.php';
 $titre = "Tableaux php";
 
 
-// ---------------------TABLEAUX INDECXES :
+// ---------------------TABLEAUX INDECXES (Index Array):
 /* $tab1 = [];
 $notes = [12, 14, 6, 10];
 
@@ -27,7 +27,7 @@ dbug($tabFusion); */
 
 
 
-// ---------------------TABLEAUX ASSOCIATIFS :
+// ---------------------TABLEAUX ASSOCIATIFS (Associative Array) :
 
 $fruits = [
     'banane' => 'jaune',
