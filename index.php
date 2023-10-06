@@ -8,7 +8,7 @@ require './functions.php';
 $titre = "Boucles (loops) php";
 
 
-$planetes = ['mars', 'terre', 'uranus', 'venus', 'jupiter', 'mercure'];  //=> TABLEAU INDECXE (Indexed Array)
+/* $planetes = ['mars', 'terre', 'uranus', 'venus', 'jupiter', 'mercure'];  //=> TABLEAU INDECXE (Indexed Array)
 
 $planetes2 = [                      //=>TABLEAU ASSOCIATIF (Associative Array)
     'm' => 'mars',
@@ -17,9 +17,22 @@ $planetes2 = [                      //=>TABLEAU ASSOCIATIF (Associative Array)
     'v' => 'venus',
     'j' => 'jupiter',
     'm' => 'mercure'
+]; */
+
+//Afficher dans une liste ul toutes les donées de ce user avec foreach:
+$user = [
+    'nom' => 'Doupet Lucien',
+    'email' => 'ldoupe@yaya.com',
+    'competance' => ['php', 'react', 'python']
 ];
+dbug($user);
+foreach($user as $key => $value) :    
+    echo $key . ' : ' . $value . '<br>';
+endforeach;
+
+
+
+
 
 
 require './index.view.php';
-?>
-
