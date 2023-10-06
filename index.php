@@ -5,12 +5,12 @@
 
 require './functions.php';
 
-$titre = "Boucles php";
+$titre = "Boucles (loops) php";
 
 
-$planetes = ['mars', 'terre', 'uranus', 'venus', 'jupiter', 'mercure'];  //=> TABLEAU INDECXE
+$planetes = ['mars', 'terre', 'uranus', 'venus', 'jupiter', 'mercure'];  //=> TABLEAU INDECXE (Indexed Array)
 
-$planetes2 = [                      //=>TABLEAU ASSOCIATIF
+$planetes2 = [                      //=>TABLEAU ASSOCIATIF (Associative Array)
     'm' => 'mars',
     't' => 'terre',
     'u' => 'uranus',

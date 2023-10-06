@@ -21,9 +21,18 @@
     echo ucwords("$planete<br>");  // --- ucwords  ---  is to capitalizer 1 letter of a word
 };
  */
-foreach() {
+
+
+foreach($planetes2 as $key => $valeur) {    // loop on Associative Array
+echo $key . ' : ' . $valeur . '<br>';
+};
+
+echo '<hr>';
+
+foreach($planetes as $key => $valeur) {    // loop on Indexed Array
+    echo $key . ' : ' . $valeur . '<br>';
+};
     
-}
 
 
 
