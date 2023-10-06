@@ -92,7 +92,7 @@ echo $ceppic; */
 // Afficher les phrases suivantes :
 //Le nom de Lucie est Dupond.
 //L'email de Michel MOURAD est moumi@caramail.com.
-$person1 = [
+/* $person1 = [
     'nom' => 'Carle',
     'prenom' => 'Awa',
     'email' => 'cawa@wahoo.com'
@@ -113,16 +113,44 @@ $people = [
 ];
 dbug($people);
 // unset($people); //destroys the specified variables
-
 dd('le nom de '. $people[2]['prenom'] . ' est ' . $people[2]['nom']);
 dd('L\'email de '. $people[1]['prenom'] . ' ' . strtoupper($people[1]['nom']) . ' est ' . $people[1]['email']);
-
+ */
 
 //json_encode — Returns the JSON representation of a value :
-$jsonPeople =json_encode($people);
+/* $jsonPeople =json_encode($people);
+dd($jsonPeople); */
+
+
+$jsonPerson = '{
+    "nom" : "Pontpasneuf",
+    "prenom" : "Albert",
+    "email" : "pontal@gmail.com",
+    "couleur" : ["rouge", "vert", "jaune"],
+    "image" : "https://ximg.es/128x128/000/fff"
+}';
+
+$jsonPersonArrayPhp = json_decode($jsonPerson, true);
+dbug($jsonPersonArrayPhp);
+
+//Afficher une card pour cette personne
+?>
+<figure>
+    <img src="<?= $jsonPersonArrayPhp['image']?>" alt="">
+        <figurecaption>
+            <ul>
+                <li> <?= $jsonPersonArrayPhp['prenom']?> <?= $jsonPersonArrayPhp['nom']?> </li>
+                <li><?= $jsonPersonArrayPhp['email']?></li>
+            </ul>
+        </figurecaption>
+    </img>
+</figure>
 
 
 
 
+
+<?php
 // require './index.view.php';
 ?>
+
