@@ -8,9 +8,8 @@ require './functions.php';
 $titre = "Tableaux php";
 
 
-// ---------------------TABLEAUX INDECSES :
-$tab1 = [];
-
+// ---------------------TABLEAUX INDECXES :
+/* $tab1 = [];
 $notes = [12, 14, 6, 10];
 
 $tab1[] = 'Janvier';
@@ -22,9 +21,22 @@ array_push($tab1, 'Voiture', 10.5, [45, true, 'Truc']); //add elemets to array
 $tabFusion = array_merge($tab1,$notes); //merge 2 arrays
 
 
-dbug($tabFusion);
+dbug($tabFusion); */
 
-dd($tabFusion[5][2]); //shows 2d element in th 5th element
+// dd($tabFusion[5][2]); //shows 2d element in th 5th element
+
+
+
+// ---------------------TABLEAUX ASSOCIATIFS :
+
+$fruit = [
+    'banane' => 'jaune',
+    'pomme' => 'rouge',
+    'kiwi' => 'vert'
+];
+
+
+
 
 
 require './index.view.php';

@@ -10,7 +10,7 @@ echo '</pre>';
 
 };
 
-dbug("Test");
+// dbug("Test");
 
 function dd($value) 
 {
