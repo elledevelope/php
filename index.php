@@ -19,24 +19,7 @@ $planetes2 = [                      //=>TABLEAU ASSOCIATIF
     'm' => 'mercure'
 ];
 
-dbug($planetes);
 
-foreach($planetes as $planete) {
-    echo ucwords("$planete<br>");  // --- ucwords  ---  is to capitalizer 1 letter of a word
-    //echo $planete . <br>;  - is the same as the upper line, two different syntaxe 
-
-};
-
-
-
-
-?>
-
-
-
-
-
-<?php
-// require './index.view.php';
+require './index.view.php';
 ?>
 
