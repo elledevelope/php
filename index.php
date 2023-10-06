@@ -147,6 +147,15 @@ $jsonApiPokemon = file_get_contents($urlApiPokemon);
 $jsonApiArrayPokemon =json_decode($jsonApiPokemon, true);
 //dd($jsonApiArrayPokemon['abilities'][0]['ability']['name']);  //shows selected item in api array
 dd($jsonApiArrayPokemon); 
+dd($jsonApiArrayPokemon['sprites']['back_default']); //img
+
+
+/* function getFrontSprite($pokemon){
+    $jsonAPI = file_get_contents("https://pokeapi.co/api/v2/pokemon/" . $pokemon);
+    $jsonAPIL = json_decode($jsonAPI,true);
+    echo "<img src=" . $jsonAPIL["sprites"]["versions"]["generation-v"]["black-white"]["front_default"] . '>';
+} */
+
 
 ?>
 
@@ -162,6 +171,7 @@ dd($jsonApiArrayPokemon);
 </figure>
  -->
 
+<!-- <img src="" alt="">  -->
 
 
 
