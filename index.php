@@ -134,18 +134,33 @@ $jsonPersonArrayPhp = json_decode($jsonPerson, true);
 dbug($jsonPersonArrayPhp);
 
 //Afficher une card pour cette personne
+
+//////////////////////////================ AIP EMPLOYEES: 
+$urlApiEmployees = 'https://dummy.restapiexample.com/api/v1/employees';
+$jsonApiEmployees = file_get_contents($urlApiEmployees);
+dd($jsonApiEmployees);
+
+
+//////////////////////////================ AIP POKEMON: 
+$urlApiPokemon = 'https://pokeapi.co/api/v2/pokemon/ditto';
+$jsonApiPokemon = file_get_contents($urlApiPokemon);
+$jsonApiArrayPokemon =json_decode($jsonApiPokemon, true);
+//dd($jsonApiArrayPokemon['abilities'][0]['ability']['name']);  //shows selected item in api array
+dd($jsonApiArrayPokemon); 
+
 ?>
-<figure>
-    <img src="<?= $jsonPersonArrayPhp['image']?>" alt="">
+
+<!-- <figure>
+    <img src=" //$jsonPersonArrayPhp['image']?>" alt="">
         <figurecaption>
             <ul>
-                <li> <?= $jsonPersonArrayPhp['prenom']?> <?= $jsonPersonArrayPhp['nom']?> </li>
-                <li><?= $jsonPersonArrayPhp['email']?></li>
+                <li>  //$jsonPersonArrayPhp['prenom']?>  //$jsonPersonArrayPhp['nom']?> </li>
+                <li> //$jsonPersonArrayPhp['email']?></li>
             </ul>
         </figurecaption>
     </img>
 </figure>
-
+ -->
 
 
 
