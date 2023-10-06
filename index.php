@@ -40,10 +40,58 @@ $fruits = [
 dd($fruit); */
 
 
-$chaine = implode(",",$fruits); // IMPLODE affiche les valeurs of tableaux and you choose separateur, in this case is ","
+/* $chaine = implode(",",$fruits); // IMPLODE affiche les valeurs of tableaux and you choose separateur, in this case is ","
 // dd($chaine);
 $fruits2 = explode(",", $chaine);  // EXPLODE is the opposide of IMPLODE 
 dd($fruits2);
+ */
+
+
+
+
+
+/* 
+sort — Trie un tableau en ordre croissant
+asort — Trie un tableau en ordre croissant et conserve l'association des index
+rsort  — Sort an array in descending order - r=reverse 
+ksort  — Trie un tableau en fonction des clés en ordre croissant
+arsort — Sort an array in descending order and maintain index association
+krsort  — Trie un tableau en fonction des clés en ordre décroissant
+*/
+/* $planetes = ['mars', 'terre', 'uranus', 'venus', 'jupiter', 'mercure'];  //=> TABLEAU INDECXE
+
+$planetes2 = [                      //=>TABLEAU ASSOCIATIF
+    'm' => 'mars',
+    't' => 'terre',
+    'u' => 'uranus',
+    'v' => 'venus',
+    'j' => 'jupiter',
+    'm' => 'mercure'
+];
+
+// dbug($planetes);
+dbug($planetes2);
+
+sort($planetes2);
+dd($planetes2); */
+
+
+
+//Ecrire le mot CEPPIC avec les lettres du tableau $tab :
+$tab = [];
+$tab[] = ['A', 'B', 'C'];
+$tab[] = ['Q', 'R', 'T'];
+$tab[] = ['E', 'U', 'P', 'I'];
+dbug($tab);
+dd($tab[0][2] . $tab[2][0] . $tab[2][2] . $tab[2][2] . $tab[2][3] . $tab[0][2]); //resolution 1
+/* $ceppic = $tab[0][2] . $tab[2][0] . $tab[2][2] . $tab[2][2] . $tab[2][3] . $tab[0][2];  //resolution 2
+echo $ceppic; */
+
+
+$persone1 = [
+    
+]
+
 
 
 

@@ -15,7 +15,7 @@ echo '</pre>';
 function dd($value) 
 {
 dbug($value);
-die('Script php arrété !!!');
+// die('Script php arrété !!!');
 };
 
 ?>
