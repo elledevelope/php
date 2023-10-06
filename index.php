@@ -78,19 +78,48 @@ dd($planetes2); */
 
 
 //Ecrire le mot CEPPIC avec les lettres du tableau $tab :
-$tab = [];
+/* $tab = [];
 $tab[] = ['A', 'B', 'C'];
 $tab[] = ['Q', 'R', 'T'];
 $tab[] = ['E', 'U', 'P', 'I'];
 dbug($tab);
 dd($tab[0][2] . $tab[2][0] . $tab[2][2] . $tab[2][2] . $tab[2][3] . $tab[0][2]); //resolution 1
 /* $ceppic = $tab[0][2] . $tab[2][0] . $tab[2][2] . $tab[2][2] . $tab[2][3] . $tab[0][2];  //resolution 2
-echo $ceppic; */
+echo $ceppic; */ 
 
 
-$persone1 = [
-    
-]
+/////////////////////////////////
+// Afficher les phrases suivantes :
+//Le nom de Lucie est Dupond.
+//L'email de Michel MOURAD est moumi@caramail.com.
+$person1 = [
+    'nom' => 'Carle',
+    'prenom' => 'Awa',
+    'email' => 'cawa@wahoo.com'
+];
+
+$people = [
+    $person1,
+    [
+        'nom' => 'Mourad',
+        'prenom' => 'Michel',
+        'email' => 'moumi@caramail.com'
+    ],
+    [
+        'nom' => 'Dupond',
+        'prenom' => 'Lucie',
+        'email' => 'ludo@gimayle.com'
+    ]
+];
+dbug($people);
+// unset($people); //destroys the specified variables
+
+dd('le nom de '. $people[2]['prenom'] . ' est ' . $people[2]['nom']);
+dd('L\'email de '. $people[1]['prenom'] . ' ' . strtoupper($people[1]['nom']) . ' est ' . $people[1]['email']);
+
+
+//json_encode — Returns the JSON representation of a value :
+$jsonPeople =json_encode($people);
 
 
 
