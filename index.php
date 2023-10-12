@@ -22,7 +22,7 @@ $titre = "Formulaire php";
 
 <body>
     <h1>Formulaire</h1>
-    <form action="" method="post"> <!-- to use with dbug($_POST)//// or action="./traitment_php.php" -->
+    <form action="" method=" post"> <!-- to use with dbug($_POST)//// or action="./traitment_php.php" -->
         <label for="name">Name:
             <input type="text" name="name" required placeholder="Your Name">
         </label>
@@ -58,6 +58,7 @@ $titre = "Formulaire php";
 
 
 <?php
+
 /* -------------------EXERCICE  :   
     Afficher des phrases avec les informations du formulaire:
     Votre nom est :
@@ -84,7 +85,6 @@ if (isset($_POST['submitted'])) :
     echo "Votre commentaire est : " . $_POST['comment']  . "<br>";
     echo "Vos compétences sont : " . implode(', ', $_POST['competance']);
 endif;
-
 
 // require './index.view.php';
 ?>

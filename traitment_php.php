@@ -6,4 +6,5 @@ $titre = "Formulaire php";
 // dbug($_POST);
 
 
+
 ?>
