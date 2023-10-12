@@ -72,7 +72,7 @@ echo calcul("2", 5); //echo will give ERROR because int $a forces $a to be a num
 } ;
 echo calcul(2.5, 5.5);  */
 
-////////////////------------------------------------the `global` keyword:
+////////////////------------------------------------the `global` keyword / Portée des variables:
 $x = 5;
 $y = 3;
 function calcul($xPasseEnParametre) {
