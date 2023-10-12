@@ -4,11 +4,8 @@ $titre = "Formulaire php";
 // dd($GLOBALS); //$GLOBALS — Référence toutes les variables disponibles dans un contexte global
 //dd($_SERVER);  //$_SERVER — Variables de serveur et d'exécution
 
-// dbug($_GET) //this is Superglobal
-// dbug($_POST) //this is Superglobal
-/* Afficher des phrases avec les informations du formulaire:
-    Votre nom est :
-    Vos Competances sont : , , */
+// dbug($_GET); //this is Superglobal
+// dbug($_POST); //this is Superglobal
 ?>
 
 <!-----------------------------------------Formulaire PHP: -------------------------------------->
@@ -39,9 +36,9 @@ $titre = "Formulaire php";
         </label>
 
         <label for="Level"> Level :
-            <input id ="ls" type="radio" name="level" value="debutant">Débutant
-            <input id ="ls" type="radio" name="level" value="intermediaire">Intermediaire
-            <input id ="ls" type="radio" name="level" value="expert">Expert
+            <input id="ls" type="radio" name="level" value="debutant">Débutant
+            <input id="ls" type="radio" name="level" value="intermediaire">Intermediaire
+            <input id="ls" type="radio" name="level" value="expert">Expert
         </label>
 
         <label for="competance">Competance :
@@ -55,13 +52,39 @@ $titre = "Formulaire php";
         <input type="submit" name="submitted" value="Valider">
     </form>
 </body>
+
 </html>
-/* Afficher des phrases avec les info du formulaire:
-    Votre nom est :
-    Vos Competances sont : , , */
 
 
 
 <?php
+/* -------------------EXERCICE  :   
+    Afficher des phrases avec les informations du formulaire:
+    Votre nom est :
+    Votre email est :
+    Vos Competances sont : , ,  */
+
+/* 
+//-------------------SOLUTION_1  :  
+    $nom = $_POST['name'];
+    $email = $_POST['email'];
+    $competences = $_POST['competance'];   
+    $niveau = $_POST['level'];
+    echo "Votre nom est : " . $nom . "<br>";
+    echo "Votre email est : " . $email . "<br>";
+    echo "Votre niveau est : " . $niveau . "<br>";
+    echo "Vos compétences sont : " . implode(', ', $competences); */
+
+
+//-------------------SOLUTION_1  :  
+if (isset($_POST['submitted'])) :
+    echo "Votre nom est : " . $_POST['name']  . "<br>";
+    echo "Votre email est : " . $_POST['email'] . "<br>";
+    echo "Votre niveau est : " . $_POST['level'] . "<br>";
+    echo "Votre commentaire est : " . $_POST['comment']  . "<br>";
+    echo "Vos compétences sont : " . implode(', ', $_POST['competance']);
+endif;
+
+
 // require './index.view.php';
 ?>
