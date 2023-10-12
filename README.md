@@ -20,3 +20,5 @@ Les fichier **php** se trouve dans le dossier ' c:/xampp/htdocs '
 [Water.css](https://watercss.kognise.dev/)
 
 [Your AI search engine and pair programmer](https://www.phind.com/)
+
+[Snippets in Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
