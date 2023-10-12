@@ -5,7 +5,7 @@ $titre = "Formulaire php";
 //dd($_SERVER);  //$_SERVER — Variables de serveur et d'exécution
 
 // dbug($_GET); //this is Superglobal
-// dbug($_POST); //this is Superglobal
+dbug($_POST); //this is Superglobal
 ?>
 
 <!-----------------------------------------Formulaire PHP: -------------------------------------->
@@ -22,7 +22,7 @@ $titre = "Formulaire php";
 
 <body>
     <h1>Formulaire</h1>
-    <form action="" method=" post"> <!-- to use with dbug($_POST)//// or action="./traitment_php.php" -->
+    <form action="" method="post"> <!-- to use with dbug($_POST)//// or action="./traitment_php.php" -->
         <label for="name">Name:
             <input type="text" name="name" required placeholder="Your Name">
         </label>
