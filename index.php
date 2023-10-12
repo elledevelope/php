@@ -96,7 +96,7 @@ if($vrai) {
 echo $vrai ? "Vrai" : 'Faux';
  */
 
- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* $vote = 7500;
 dbug($vote);
@@ -106,9 +106,9 @@ dbug($vote); //7499 */
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//---------------------------------------Switch case:
-$couleur = 'violet';
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------Switch case -- The switch statement is similar to a series of IF statements -- Note that switch case does loose comparison -- https://www.php.net/manual/en/control-structures.switch.php:
+/* $couleur = 'violet';
 switch($couleur) {
     case 'red':
         echo 'Your favorite color is red';
@@ -122,7 +122,19 @@ switch($couleur) {
     default:
     echo 'Your favorite clor not red, not bleu, not green';
 };
+ */
 
+ 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//---------------------------------------Match --L'expression match permet d'effectuer une évaluation basée sur le contrôle d'identité d'une valeur  -- https://www.php.net/manual/fr/control-structures.match.php:
+$couleur = 'violet';
+$return_value = match($couleur) {
+    'red' => 'Your favorite color is red' ,
+    'bleu' => 'Your favorite color is blue' ,
+    'green' => 'Your favorite color is green' ,
+    default => 'Your favorite clor not red, not bleu, not green' ,
+};
+echo $return_value;
 
 
 // require './index.view.php';
