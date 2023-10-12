@@ -2,6 +2,8 @@
 $titre = "Formulaire php";
 
 
-// dbug($_GET)
-dbug($_POST)
+// dbug($_GET);
+// dbug($_POST);
+
+
 ?>
