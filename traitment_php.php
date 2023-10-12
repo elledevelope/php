@@ -37,6 +37,3 @@ if (isset($_POST['submitted'])) :  // this can be replaces with -> if ($SERVER[$
 // else:
 //     exit('Validation echoué')
 endif;
-
-
-?>
