@@ -5,7 +5,7 @@ $titre = "Formulaire php";
 //dd($_SERVER);  //$_SERVER — Variables de serveur et d'exécution
 
 // dbug($_GET); //this is Superglobal
-dbug($_POST); //this is Superglobal
+// dbug($_POST); //this is Superglobal
 ?>
 
 <!-----------------------------------------Formulaire PHP: -------------------------------------->
@@ -22,7 +22,7 @@ dbug($_POST); //this is Superglobal
 
 <body>
     <h1>Formulaire</h1>
-    <form action="" method="post"> <!-- to use with dbug($_POST)//// or action="./traitment_php.php" -->
+    <form action="./traitment_php.php" method="get"> <!-- to use with dbug($_POST)//// or action="./traitment_php.php" // method="get" or method="post"-->
         <label for="name">Name:
             <input type="text" name="name" required placeholder="Your Name">
         </label>
@@ -58,33 +58,6 @@ dbug($_POST); //this is Superglobal
 
 
 <?php
-
-/* -------------------EXERCICE  :   
-    Afficher des phrases avec les informations du formulaire:
-    Votre nom est :
-    Votre email est :
-    Vos Competances sont : , ,  */
-
-/* 
-//-------------------SOLUTION_1  :  
-    $nom = $_POST['name'];
-    $email = $_POST['email'];
-    $competences = $_POST['competance'];   
-    $niveau = $_POST['level'];
-    echo "Votre nom est : " . $nom . "<br>";
-    echo "Votre email est : " . $email . "<br>";
-    echo "Votre niveau est : " . $niveau . "<br>";
-    echo "Vos compétences sont : " . implode(', ', $competences); */
-
-
-//-------------------SOLUTION_1  :  
-if (isset($_POST['submitted'])) :
-    echo "Votre nom est : " . $_POST['name']  . "<br>";
-    echo "Votre email est : " . $_POST['email'] . "<br>";
-    echo "Votre niveau est : " . $_POST['level'] . "<br>";
-    echo "Votre commentaire est : " . $_POST['comment']  . "<br>";
-    echo "Vos compétences sont : " . implode(', ', $_POST['competance']);
-endif;
 
 // require './index.view.php';
 ?>

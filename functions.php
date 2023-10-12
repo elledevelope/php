@@ -8,7 +8,8 @@ style="background-color:pink;
 color:white;
 overflow:auto;
 paddind:1 rem;"
-font-family:monospace;>';
+font-family:monospace;
+font-size:1 rem;>';
 print_r($value);
 // var_dump($value);
 echo '</pre>';
