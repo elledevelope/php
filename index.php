@@ -19,7 +19,7 @@ $planetes2 = [                      //=>TABLEAU ASSOCIATIF (Associative Array)
     'm' => 'mercure'
 ]; */
 
-//Afficher dans une liste ul toutes les donées de ce user avec foreach:
+//A//////////////////////------------------Enonce: afficher dans une liste ul toutes les donées de ce user avec foreach:///////////////////
 $user = [
     'nom' => 'Doupet Lucien',
     'email' => 'ldoupe@yaya.com',
