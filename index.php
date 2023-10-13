@@ -8,7 +8,7 @@ require './functions.php';
 $titre = "Tableaux php";
 
 
-// ---------------------TABLEAUX INDECXES (Index Array):
+//////////////////////////////////////////// ---------------------TABLEAUX INDECXES (Index Array):
 /* $tab1 = [];
 $notes = [12, 14, 6, 10];
 
@@ -16,40 +16,37 @@ $tab1[] = 'Janvier';
 $tab1[] = 45;
 $tab1[] = true;
 
-array_push($tab1, 'Voiture', 10.5, [45, true, 'Truc']); //add elemets to array
+array_push($tab1, 'Voiture', 10.5, [45, true, 'Truc']); ////////////--------------------------add elemets to array
 
-$tabFusion = array_merge($tab1,$notes); //merge 2 arrays
-
+$tabFusion = array_merge($tab1,$notes); //////////////-----------------------------------------merge 2 arrays
 
 dbug($tabFusion); */
 
-// dd($tabFusion[5][2]); //shows 2d element in th 5th element
+// dd($tabFusion[5][2]); /////////////////////--------------------------------------------------shows 2d element in th 5th element
 
 
 
-// ---------------------TABLEAUX ASSOCIATIFS (Associative Array) :
+///////////////////////////////////////////// ---------------------TABLEAUX ASSOCIATIFS (Associative Array) :
 
 $fruits = [
     'banane' => 'jaune',
     'pomme' => 'rouge',
     'kiwi' => 'vert'
 ];
-// dd($fruits['pomme']);  // == call valeur (rouge) of a clé (pomme)  in a tableaux
+// dd($fruits['pomme']);  //-------------- call valeur (rouge) of a clé (pomme)  in an array
 
-/* $fruits['poire'] ='vert'; //added new key/valeur to a tableaux
+/* $fruits['poire'] ='vert'; ///////////--------------------------------------------------------added new key/value to an array
 dd($fruit); */
 
 
-/* $chaine = implode(",",$fruits); // IMPLODE affiche les valeurs of tableaux and you choose separateur, in this case is ","
+/* $chaine = implode(",",$fruits); /////--------------IMPLODE: affiche les valeurs of tableaux and you choose separateur, in this case is ","
 // dd($chaine);
-$fruits2 = explode(",", $chaine);  // EXPLODE is the opposide of IMPLODE 
+$fruits2 = explode(",", $chaine);  ////---------------EXPLODE is the opposide of IMPLODE 
 dd($fruits2);
  */
 
 
-
-
-
+///////////////////////////////////////////////////-----Trie un tableau----//////////////////////////////////////////////////////////////////
 /* 
 sort — Trie un tableau en ordre croissant
 asort — Trie un tableau en ordre croissant et conserve l'association des index
@@ -58,6 +55,7 @@ ksort  — Trie un tableau en fonction des clés en ordre croissant
 arsort — Sort an array in descending order and maintain index association
 krsort  — Trie un tableau en fonction des clés en ordre décroissant
 */
+
 /* $planetes = ['mars', 'terre', 'uranus', 'venus', 'jupiter', 'mercure'];  //=> TABLEAU INDECXE
 
 $planetes2 = [                      //=>TABLEAU ASSOCIATIF
@@ -75,8 +73,7 @@ dbug($planetes2);
 sort($planetes2);
 dd($planetes2); */
 
-
-
+////////////////////////////////////------------------Enonce-1 CEPPIC---------------------/////////////////////////////////////////////////
 //Ecrire le mot CEPPIC avec les lettres du tableau $tab :
 /* $tab = [];
 $tab[] = ['A', 'B', 'C'];
@@ -85,10 +82,10 @@ $tab[] = ['E', 'U', 'P', 'I'];
 dbug($tab);
 dd($tab[0][2] . $tab[2][0] . $tab[2][2] . $tab[2][2] . $tab[2][3] . $tab[0][2]); //resolution 1
 /* $ceppic = $tab[0][2] . $tab[2][0] . $tab[2][2] . $tab[2][2] . $tab[2][3] . $tab[0][2];  //resolution 2
-echo $ceppic; */ 
+echo $ceppic; */
 
 
-/////////////////////////////////
+////////////////////////////////////------------------Enonce-2---------------------/////////////////////////////////////////////////
 // Afficher les phrases suivantes :
 //Le nom de Lucie est Dupond.
 //L'email de Michel MOURAD est moumi@caramail.com.
@@ -117,10 +114,11 @@ dd('le nom de '. $people[2]['prenom'] . ' est ' . $people[2]['nom']);
 dd('L\'email de '. $people[1]['prenom'] . ' ' . strtoupper($people[1]['nom']) . ' est ' . $people[1]['email']);
  */
 
+
+//////////////////////////////////////////////----------------json-----------------/////////////////////////////////////////////////////
 //json_encode — Returns the JSON representation of a value :
 /* $jsonPeople =json_encode($people);
 dd($jsonPeople); */
-
 
 $jsonPerson = '{
     "nom" : "Pontpasneuf",
@@ -132,7 +130,7 @@ $jsonPerson = '{
 
 $jsonPersonArrayPhp = json_decode($jsonPerson, true);
 dbug($jsonPersonArrayPhp);
-
+////////////////////////////////////------------------Enonce-3 Pokemon---------------------/////////////////////////////////////////////////
 //Afficher une card pour cette personne
 
 //////////////////////////================ AIP EMPLOYEES: 
@@ -144,9 +142,9 @@ dd($jsonApiEmployees);
 //////////////////////////================ AIP POKEMON: 
 $urlApiPokemon = 'https://pokeapi.co/api/v2/pokemon/ditto';
 $jsonApiPokemon = file_get_contents($urlApiPokemon);
-$jsonApiArrayPokemon =json_decode($jsonApiPokemon, true);
-//dd($jsonApiArrayPokemon['abilities'][0]['ability']['name']);  //shows selected item in api array
-dd($jsonApiArrayPokemon); 
+$jsonApiArrayPokemon = json_decode($jsonApiPokemon, true);
+//dd($jsonApiArrayPokemon['abilities'][0]['ability']['name']);  //----------------------------shows selected item in api array
+dd($jsonApiArrayPokemon);
 dd($jsonApiArrayPokemon['sprites']['back_default']); //img
 
 
@@ -178,4 +176,3 @@ dd($jsonApiArrayPokemon['sprites']['back_default']); //img
 <?php
 // require './index.view.php';
 ?>
-
