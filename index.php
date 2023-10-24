@@ -15,11 +15,29 @@ $routes = [
 ];
 // dbug($routes);
 
-$urlToControllers = match($uriPath) {
-    '/' => 'controllers/index.php',
-    '/contact' => 'controllers/contact.php',
-};
-// dbug($urlToControllers);
+// $urlToControllers = match($uriPath) {
+//     '/' => 'controllers/index.php',
+//     '/contact' => 'controllers/contact.php',
+//     default =>'views/404.php',
+// };
+// // dbug($urlToControllers);
 
-require $urlToControllers;
+// require $urlToControllers;
+// exit();
+
+function urlToControllers($uriPath, $routes)
+{
+    if( array_key_exists($uriPath, $routes) ) :
+        require $routes[$uriPath];
+    else:
+        abort();
+    endif;
+};
+
+function abort()
+{
+require 'views/404.php';
 exit();
+};
+
+urlToControllers($uriPath, $routes);
