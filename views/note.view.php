@@ -10,6 +10,7 @@
 <h2><?=$note['titre']?></h2>
 <p><?=$note['content']?></p>
 <p><?=$note['created_at']?></p>
+<a href="/notes">Retour à la liste des notes</a>
 
 
 </body>
