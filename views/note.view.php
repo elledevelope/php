@@ -1,9 +1,3 @@
-<?php
-require 'config/functions.php';
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +6,7 @@ require 'config/functions.php';
     <title>Note</title>
 </head>
 <body>
-    <h1>Notes</h1>
+    <h1>Note</h1>
 
 
 
