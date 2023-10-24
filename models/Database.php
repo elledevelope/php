@@ -1,7 +1,5 @@
 <?php
 
-include 'config/functions.php';
-
 $user = 'root'; //Database server - User: root@localhost 
 $pass = ''; //password of MySQL server (we don't have password)
 
