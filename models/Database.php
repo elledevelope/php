@@ -8,7 +8,4 @@ $connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass); //conne
 // dd($connexion); //checking than connextion to Database MySQL works
 
 
-
-include 'views/notes.view.php';
-
 ?>
