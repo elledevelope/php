@@ -2,11 +2,16 @@
 
 require 'models/Database.php';
 
-dd($_GET);
+// dd($_GET);
+$id = $_GET['id'];
 
-//$notes = $connexion->query('SELECT * FROM note')->fetchAll(PDO::FETCH_ASSOC); //query is requette, fetchAll is to get all info from table note
+$note = $connexion->prepare('SELECT * FROM `note` WHERE id = :id'); //query is requette, fetchAll is to get all info from table note
 //fetchAll(PDO::FETCH_ASSOC) is to make array associative 
-// dd($notes);
+
+$note->bindParam(':id',$id);
+$note->execute();
+$note = $note->fetch(PDO::FETCH_ASSOC);
+// dd($note);
 
 
 require 'views/note.view.php';

@@ -7,7 +7,9 @@
 </head>
 <body>
     <h1>Note</h1>
-
+<h2><?=$note['titre']?></h2>
+<p><?=$note['content']?></p>
+<p><?=$note['created_at']?></p>
 
 
 </body>
