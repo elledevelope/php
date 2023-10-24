@@ -22,3 +22,36 @@ Les fichier **php** se trouve dans le dossier ' c:/xampp/htdocs '
 [Your AI search engine and pair programmer](https://www.phind.com/)
 
 [Snippets in Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+
+
+
+-----------------------------------------------------------
+
+# PHP
+
+[Installation XAMMP](https://www.apachefriends.org/fr/download.html)
+
+LEs fichiers **php** se trouvent dans le dossier `c:/xampp/htdocs`
+
+[PHP documentation](https://www.php.net/manual/fr/)
+
+---
+
+Afin d'encapsuler notre application il faut :
+
+Ajouter dans le fichier `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
+
+```
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/php"
+    ServerName phpnotes.com
+</VirtualHost>
+```
+
+Et ajouter un fichier `.htaccess`
+
+---
+
+# PDO
+
+[Documentation PDO](https://www.php.net/manual/fr/pdo.connections.php)
