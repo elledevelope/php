@@ -1,3 +1,9 @@
+<?php
+require 'config/functions.php';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,5 +13,19 @@
 </head>
 <body>
     <h1>Notes</h1>
+    <ul>
+    <?php foreach ($notes as $note) : ?>
+    <li>
+        <a href="/note?id=<?=$note['id']?>">
+        <?=$note['titre']?>
+        </a>
+    </li>
+
+<?php 
+endforeach;
+?>
+    </ul>
+
+
 </body>
 </html>
