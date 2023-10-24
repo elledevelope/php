@@ -1,8 +1,8 @@
 <?php
 $user = 'root';
-$pass = '',
+$pass = '';
 
-$dbh = new PDO('mysql:host=localhost;dbname=notes', $user, $pass);
+$connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass);
 
 
 
