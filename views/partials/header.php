@@ -10,7 +10,7 @@
 
 <body>
 <h1>Welcome to Notes</h1>
-<p>best app for your notes</p>
+<p>application de prise de notes</p>
 
 <?php include 'nav.php' ?>
 
