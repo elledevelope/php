@@ -6,13 +6,17 @@
     <li>
         <a href="/note?id=<?=$note['id']?>">
         <?=$note['titre']?>
-        </a>
+        </a> - <a href="/note-delete?id=<?=$note['id']?>" onClick="return confirm('Etes-vous certain de vouloir supprimer cette note?');">x</a>
     </li>
 
 <?php 
 endforeach;
 ?>
     </ul>
+
+    <p>
+        <a href="/note-new">Ajouter une note</a>
+    </p>
 
 <?php require 'partials/footer.php';  ?>
 
