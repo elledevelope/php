@@ -7,14 +7,11 @@ $users = $connexion->query('SELECT * FROM user')->fetchAll(PDO::FETCH_ASSOC);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // dd($_POST);
 
-$titre = filter_var($_POST['titre'],
-FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$titre = filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-$content = filter_var($_POST['contecnt'],
-FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$content = filter_var($_POST['contecnt'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-$user = filter_var($_POST['user'],
-FILTER_SANITIZE_NUMBER_INT);
+$user = filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT);
 
 
     $noteNew = $connexion->prepare('INSERT INTO note (titre, content, user_id)
@@ -27,6 +24,6 @@ FILTER_SANITIZE_NUMBER_INT);
     
     header('Location: /notes');
     exit();
-}
+};
 
 require 'views/note-new.view.php';

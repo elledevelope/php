@@ -9,7 +9,7 @@
 
 <form method="POST">
     <label for="titre">Titre :</label>
-    <input type="text" name="titre" id="titre">
+    <input type="text" name="titre" id="titre" required>
 
     <label for="content">Contenu :</label>
     <textarea name="content" id="content" cols="30" rows="10"></textarea>
