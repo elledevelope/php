@@ -8,8 +8,17 @@
 
     <label for="content">Contenu :</label>
     <textarea name="content" id="content" cols="30" rows="10"></textarea>
-    
+
+    <label for="user">Auteur :</label>
+    <select name="user" id="user">
+        <option value="" selected></option>
+        <option value="1">John Doe</option>
+        <option value="2">Jane Doe</option>
+    </select>
+
+
     <input type="submit" value="Ajouter">
+
 </form>
 
 <?php require 'partials/footer.php';  ?>
