@@ -1,7 +1,7 @@
 <?php require 'partials/header.php';  ?>
 
 
-    <h1>IndexMenu</h1>
+    <p>Application de prise de notes</p>
 
 <?php require 'partials/footer.php';  ?>
 

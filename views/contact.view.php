@@ -1,6 +1,6 @@
 <?php require 'partials/header.php';  ?>
 
-<h1>Contact</h1>
+<h2>Contact</h2>
 
 <?php require 'partials/footer.php';  ?>
 

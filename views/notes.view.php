@@ -1,6 +1,6 @@
 <?php require 'partials/header.php';  ?>
 
-<h1>Notes</h1>
+<h2>Notes</h2>
     <ul>
     <?php foreach ($notes as $note) : ?>
     <li>
