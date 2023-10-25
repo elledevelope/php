@@ -55,3 +55,7 @@ Et ajouter un fichier `.htaccess`
 # PDO
 
 [Documentation PDO](https://www.php.net/manual/fr/pdo.connections.php)
+
+-------
+25.10.23:
+Partage ecran : https://www.jitbit.com/screensharing/#5395446285007759210
