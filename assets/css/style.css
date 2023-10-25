@@ -1,0 +1,53 @@
+/* CSS RESET */
+/* @font-face {
+    font-family: "kumbh";
+    src: url(../font/KumbhSans-VariableFont_wght.ttf);
+  } */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "kumbh"; */
+  }
+  
+  img,
+  input {
+    width: 100%;
+  }
+
+  body {
+    background-color: aqua;
+  }
+
+  
+
+/*======================================================== FOOTER ========================================================= */
+/*======================================================== FOOTER ========================================================= */
+
+footer {
+    background-color: bisque;
+    height: 15vh;
+  }
+  
+  footer p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 20px;
+  }
+  
+  #icons_rs {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+  
+  #icons_rs img {
+    width: 20px;
+    margin: 3px;
+  }
