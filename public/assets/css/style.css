@@ -1,46 +1,70 @@
 /* CSS RESET */
- 
-  * {
 
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  img,
-  input {
-    width: 100%;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  body {
-    background-color: rgb(187, 187, 85);
-  }
+img,
+input {
+  width: 100%;
+}
 
-  h1 {
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: oblique;
-    color: rgb(53, 4, 4);
-  }
+body {
+  background-color: rgba(177, 180, 142, 0.722);
+  --doc-width: 90%;
+}
 
-  #nav {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-  }
+h1 {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  color: rgb(139, 53, 124);
+  margin: 10px auto;
+}
 
-  #nav li {
-    padding: 20px;
-    font-size: 1rem;
-  }
+#app {
+  text-align: center;
+  font-style: italic;
+  font-weight: 100;
+  color: rgb(62, 52, 71);
+}
 
- #nav a {
-    color: brown;
-    text-decoration: none;
-    font-weight: 600;
-    
-  }
-  
+#nav {
+  list-style: none;
+  display: flex;
+}
+
+#nav li {
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.header {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--doc-width);
+}
+
+#nav a {
+  color: brown;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a {
+  color: brown;
+  text-decoration: none;
+}
+
+h2 {
+  padding: 20px 0;
+}
 
 /*======================================================== FOOTER ========================================================= */
 /*======================================================== FOOTER ========================================================= */

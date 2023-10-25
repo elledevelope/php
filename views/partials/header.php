@@ -9,8 +9,6 @@
 </head>
 
 <body>
-<h1>Welcome to Notes</h1>
-<p>application de prise de notes</p>
 
 <?php include 'nav.php' ?>
 
