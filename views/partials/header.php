@@ -9,12 +9,10 @@
 </head>
 
 <body>
-    <h1>Welcome to Notes</h1>
-    <ul id="nav" >
-        <li><a href="/">Acceuil</a></li>
-        <li><a href="/notes">Notes</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
+<h1>Welcome to Notes</h1>
+<p>best app for your notes</p>
+
+<?php include 'nav.php' ?>
 
 
 
