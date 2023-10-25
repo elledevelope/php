@@ -17,7 +17,7 @@
     </select>
 
 
-    <input type="submit" value="Ajouter">
+    <input id="btn" type="submit" value="Ajouter">
 
 </form>
 
