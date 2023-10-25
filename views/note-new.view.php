@@ -1,8 +1,13 @@
-<?php require 'partials/header.php';  ?>
+<?php require 'partials/header.php'; 
+
+// dbug($users);
+?>
 
 <h2>Ajout d'une nouvelle note</h2>
 
-<form action="">
+
+
+<form method="POST" action="">
     <label for="titre">Titre :</label>
     <input type="text" name="titre" id="titre">
 
@@ -12,8 +17,10 @@
     <label for="user">Auteur :</label>
     <select name="user" id="user">
         <option value="" selected></option>
-        <option value="1">John Doe</option>
-        <option value="2">Jane Doe</option>
+
+        <?php foreach ($users as $user) { ?>
+            <option value="<?=$user['user_id']?>"><?=$user['name']?></option>
+        <?php } ?>
     </select>
 
 
@@ -21,4 +28,4 @@
 
 </form>
 
-<?php require 'partials/footer.php';  ?>
+<?php require 'partials/footer.php';?>
