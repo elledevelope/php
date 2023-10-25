@@ -1,4 +1,4 @@
-<?php require 'partials/header.php'; 
+<?php require 'partials/header.php';
 
 // dbug($users);
 ?>
@@ -19,7 +19,7 @@
         <option value="" selected></option>
 
         <?php foreach ($users as $user) { ?>
-            <option value="<?=$user['user_id']?>"><?=$user['name']?></option>
+            <option value="<?= $user['user_id'] ?>"><?= $user['name'] ?></option>
         <?php } ?>
     </select>
 
@@ -28,4 +28,4 @@
 
 </form>
 
-<?php require 'partials/footer.php';?>
+<?php require 'partials/footer.php'; ?>

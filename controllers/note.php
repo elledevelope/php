@@ -43,5 +43,3 @@ $note = $note->fetch(PDO::FETCH_ASSOC); //method is called on the prepared state
   */
 
 require 'views/note.view.php';
-
-?>
