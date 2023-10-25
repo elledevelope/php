@@ -20,7 +20,7 @@ $note = $note->fetch(PDO::FETCH_ASSOC);
 
 /* $id = $_GET['id'];
 
-$query = 'SELECT note.titre, note.content, note.created_at, user.name
+$query = 'SELECT note.id, note.titre, note.content, note.created_at, user.name
           FROM note
           JOIN user ON note.user_id = user.user_id
           WHERE note.id = :id';
