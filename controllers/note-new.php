@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     $content = trim(filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $user = trim(filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT));
 
-    // Limit number of symbols  & not allows 0 symbol in titre and content:
+    //Validate input lengths and other conditions
     if (strlen($titre) === 0) :
         $errors[] = 'Titre vide !!!';
     endif;
@@ -29,6 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
 
     if (strlen($content) >= 1000) :
         $errors[] = 'Contenu supérieur à 1000 caratéres !!!';
+    endif;
+
+    if (empty($_POST['user'])) :
+        $errors[] = 'Aucun auteur séléctionné!!!';
     endif;
 
     /*     if (strlen($titre) >= 100 || strlen($titre) === 0) :
