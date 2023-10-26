@@ -8,11 +8,13 @@
 
 
 <form method="POST">
-    <label for="titre">Titre :</label>
-    <input type="text" name="titre" id="titre"> <!-- required -->
+<label for="titre">Titre :</label>
+<input type="text" name="titre" id="titre" value="<?php if(isset($_POST['titre'])) { echo $_POST['titre']; } ?>">
+ <!-- required -->
 
     <label for="content">Contenu :</label>
-    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+    <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] : '' ?></textarea> <!--- pre-fill an input field with a value that was previously submitted through a form --->
+   
 
     <label for="user">Auteur :</label>
     <select name="user" id="user"> <!-- Updated name to "user_id" -->
@@ -20,7 +22,7 @@
         <option value="" selected></option>
 
         <?php foreach ($users as $user) { ?>
-            <option value="<?= $user['user_id'] ?>"><?= $user['name'] ?></option>
+            <option value="<?= $user['user_id'] ?>" ><?= $user['name'] ?></option>
         <?php }; ?>
 
     </select>
