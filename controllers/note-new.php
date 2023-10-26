@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $titre = filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-$content = filter_var($_POST['contecnt'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$content = filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 $user = filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT);
 
