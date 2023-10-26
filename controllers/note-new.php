@@ -13,7 +13,9 @@ $content = filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 $user = filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT);
 
-if(strlen($titre) >= 10 ) :
+
+//Limit longuer of a titre of a note:
+if(strlen($titre) >= 15 ) :
 dd('Titre trop loooooooooooooooooog!!!!!');
 endif;
 
