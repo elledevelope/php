@@ -30,4 +30,10 @@
 
 </form>
 
-<?php require 'partials/footer.php'; ?>
+
+<?php require 'partials/footer.php'; 
+if (isset ($errors)) :
+dbug($errors);
+endif;
+
+?>
