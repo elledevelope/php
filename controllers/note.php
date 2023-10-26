@@ -11,8 +11,12 @@ endif;
 
 if (empty($note) )  :
     abort();
-endif;  */
+endif;
+*/
 
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])) :
+  abort();
+endif;
 
 $id = $_GET['id'];
 
