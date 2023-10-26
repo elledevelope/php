@@ -7,22 +7,26 @@ $users = $connexion->query('SELECT * FROM user')->fetchAll(PDO::FETCH_ASSOC);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // dd($_POST);
 
-    $errors = [];
+    // $errors = [];
+    $errors = '';
 
-    $titre = filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $titre = trim(filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 
-    $content = filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $content = trim(filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 
-    $user = filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT);
+    $user = trim(filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT));
 
-    // Limit number of symbols in titre and content:
-    if (strlen($titre) >= 100) {
+    // Limit number of symbols  & not allows 0 symbol in titre and content:
+/*     if (strlen($titre) >= 100 || strlen($titre) === 0) {
         $errors[] = 'Titre trop long!!';
     }
-
     if (strlen($content) >= 1000) {
         $errors[] = 'Text trop long!!';
     }
+ */
+    if (strlen($content) >= 1000 || strlen($titre) === 0 || strlen($titre) >= 100 || strlen($content) === 0) {
+        $errors = 'Le titre et le text sont incorrects!!';
+    };
 
     if (empty($errors)) {
         $noteNew = $connexion->prepare('INSERT INTO note (titre, content, user_id) VALUES (:titre, :content, :user_id)');
