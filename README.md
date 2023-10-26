@@ -35,6 +35,9 @@ LEs fichiers **php** se trouvent dans le dossier `c:/xampp/htdocs`
 
 [PHP documentation](https://www.php.net/manual/fr/)
 
+
+[Cours PHP MySQL Pierre Giraud](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/)
+
 ---
 
 Afin d'encapsuler notre application il faut :
@@ -56,9 +59,15 @@ Et ajouter un fichier `.htaccess`
 
 [Documentation PDO](https://www.php.net/manual/fr/pdo.connections.php)
 
+
+
+
 -------
 25.10.23:
 Partage ecran : https://www.jitbit.com/screensharing/#5395446285007759210
 
+
 Deleted from database:
 $connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass, [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]); 
+
+
