@@ -9,13 +9,13 @@
 
 <form method="POST">
     <label for="titre">Titre :</label>
-  <input type="text" name="titre" id="titre" >    <!-- required -->
+    <input type="text" name="titre" id="titre"> <!-- required -->
 
     <label for="content">Contenu :</label>
     <textarea name="content" id="content" cols="30" rows="10"></textarea>
 
     <label for="user">Auteur :</label>
-    <select name="user" id="user">
+    <select name="user" id="user"> <!-- Updated name to "user_id" -->
 
         <option value="" selected></option>
 
@@ -25,23 +25,19 @@
 
     </select>
 
-
     <input id="btn" type="submit" value="Ajouter">
-
 </form>
+
 
 
 <?php require 'partials/footer.php';
 
 if (isset($errors) && !empty($errors)) : //isset — Determine if a variable is declared and is different than null
-    // dbug($errors);
-   // foreach ($errors as $error) {
-
+    foreach ($errors as $error) :
 ?>
-        <p class="$error"><?= $errors ?></p>
-
+        <p class="error"><?= $error ?></p>
+        <!--<p class="error"><? //=$errors?></p>-->
 <?php
-  //  }
+    endforeach;
 endif;
-
 ?>
