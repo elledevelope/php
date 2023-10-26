@@ -13,6 +13,10 @@ $content = filter_var($_POST['contecnt'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 $user = filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT);
 
+if(strlen($titre) >= 10 ) :
+dd('Titre trop loooooooooooooooooog!!!!!');
+endif;
+
 
     $noteNew = $connexion->prepare('INSERT INTO note (titre, content, user_id)
     VALUES (:titre, :content, :user_id)');
