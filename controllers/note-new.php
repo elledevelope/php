@@ -15,9 +15,13 @@ $user = filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT);
 
 
 //Limit longuer of a titre of a note:
-if(strlen($titre) >= 15 ) :
+if(strlen($titre) >= 100 ) :
 dd('Titre trop loooooooooooooooooog!!!!!');
 endif;
+
+if(strlen($content) >= 1000 ) :
+    dd('Text trop loooooooooooooooooog!!!!!');
+    endif;
 
 
     $noteNew = $connexion->prepare('INSERT INTO note (titre, content, user_id)
