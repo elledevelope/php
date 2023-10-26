@@ -1,6 +1,6 @@
 
 <div class="header" >
-<div id="logo" >Notes</div>
+<div id="logo" >LogoNotes</div>
 <ul id="nav" >
         <li><a href="/">Acceuil</a></li>
         <li><a href="/notes">Notes</a></li>

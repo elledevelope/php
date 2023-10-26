@@ -14,7 +14,7 @@ endforeach;
 ?>
     </ul>
 
-    <p>
+    <p id="ajout-note-btn">
         <a href="/note-new">Ajouter une note</a>
     </p>
 
