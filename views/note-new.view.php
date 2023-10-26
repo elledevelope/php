@@ -9,7 +9,7 @@
 
 <form method="POST">
     <label for="titre">Titre :</label>
-    <input type="text" name="titre" id="titre" required>
+  <input type="text" name="titre" id="titre" >    <!-- required -->
 
     <label for="content">Contenu :</label>
     <textarea name="content" id="content" cols="30" rows="10"></textarea>
@@ -31,9 +31,17 @@
 </form>
 
 
-<?php require 'partials/footer.php'; 
-if (isset ($errors)) :
-dbug($errors);
+<?php require 'partials/footer.php';
+
+if (isset($errors) && !empty($errors)) : //isset — Determine if a variable is declared and is different than null
+    // dbug($errors);
+   // foreach ($errors as $error) {
+
+?>
+        <p class="$error"><?= $errors ?></p>
+
+<?php
+  //  }
 endif;
 
 ?>
