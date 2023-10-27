@@ -51,7 +51,13 @@ Ajouter dans le fichier `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
 </VirtualHost>
 ```
 
-Et ajouter un fichier `.htaccess`
+Et ajouter un fichier `.htaccess`:
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 
 ---
 
