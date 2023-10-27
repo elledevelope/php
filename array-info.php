@@ -19,7 +19,7 @@
 	array_push($ages, 70);  //--Another way: add an element to the end of an array
 	//print_r($ages);
 
-	//echo array_pop($ages);
+	//echo array_pop($ages); // array_pop() function removes the last element from an array (pops it out)
 	//print_r($ages);
 
 	//echo count($ages); //--counts the number of elements in an array
