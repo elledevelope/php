@@ -13,16 +13,16 @@ $titre = "Conditions php";
 <
 >=
 <=
-==   //comparaison d'égalité en valeur
-===  //comparaison d'égalité en valeur et en type
-!=
+==   //comparaison d'égalité en valeur //loose equal
+===  //comparaison d'égalité en valeur et en type //strict equal
+!=  //not equal 
 !==
 */
 
 /* $user = [
     'nom' => 'Doupet Lucien',
     'email' => 'ldoupe@yaya.com',
-    'competance' => ['php', 'react', 'python']
+    'competence' => ['php', 'react', 'python']
 ]; */
 
 // --------------------------------------------------Syntaxe_1:
