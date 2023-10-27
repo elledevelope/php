@@ -23,7 +23,7 @@ require './header.php';
 // echo $variable . ' ' . $Variable;
 
 
-// echo '$variable'; DO NOT USE ' ', they do not unterprate the names of variable
+// echo '$variable'; DO NOT USE ' ', they do not interpret the names of variable
 // echo "$variable"; 
 
 // echo "$variable . $Variable";
@@ -45,7 +45,7 @@ $PascalCase = 'une variable en pascal case'; */
 
 //------------------------------PRINT_T AND VAR_DUMP :
 
-// print_r($nombre);        // like console.log
+// print_r($nombre);        // like console.log  //print_redeable 
 // var_dump($nombre);       //like console.dir (gives more info: type, ect)
 // var_dump($nombreDecimale);
 // var_dump($booleen);
