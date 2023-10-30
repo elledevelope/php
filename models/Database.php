@@ -1,11 +1,15 @@
 <?php
 
-$user = 'root'; //Database server - User: root@localhost 
-$pass = ''; //password of MySQL server (we don't have password)
+require 'config/dbConfig.php';
 
-$connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass, [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);  //connection PHP to server MySQL via class PDO
+$dsn = 'mysql:host=' . DBHOST . ';dbname=' . DBNAME . ';charset:' . DBCHARSET . ''; 
+dbug($dsn);
 
-// dd($connexion); //checking than connextion to Database MySQL works
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+];
 
+$connexion = new PDO($dsn,DBUSERNAME,DBUSERPASSWORD, $options);  
 
-?>
+// dd($connexion); 
