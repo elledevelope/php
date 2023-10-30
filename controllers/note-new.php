@@ -3,7 +3,7 @@ require 'models/Database.php';
 
 // Fetch user data
 $requete = "SELECT user_id,name FROM user";
-$users = $connexion->query($requete)->fetchAll(PDO::FETCH_ASSOC);
+$users = $connexion->query($requete)->fetchAll();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     $errors = [];
@@ -54,15 +54,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
 
     if (empty($errors)) :
         $noteNew = $connexion->prepare('INSERT INTO note (titre,content,user_id) VALUES (:titre , :content , :user_id)');
-        $noteNew->bindValue(':titre', $titre, PDO::PARAM_STR);
+        $noteNew->bindValue(':titre', $titre, PDO::PARAM_STR); //PDO::PARAM_STR - precise what we whan it in string format
         $noteNew->bindValue(':content', $content, PDO::PARAM_STR);
         $noteNew->bindValue(':user_id', $user, PDO::PARAM_STR);
         $noteNew->execute();
 
-        header('Location: /notes');
-        exit();
-    endif;
 
+
+        $lastInsertId = $connexion->lastInsertId();
+        if ($lastInsertId) :
+            header('Location: /notes');
+            exit();
+        else :
+            abort();
+        endif;
+    endif;
 endif;
 
 include 'views/note-new.view.php';
