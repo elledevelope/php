@@ -1,5 +1,4 @@
 <?php
-
 define('DBHOST', 'localhost');
 define('DBNAME', 'notes');
 define('DBUSERNAME', 'root');
