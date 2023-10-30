@@ -54,9 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
 
     if (empty($errors)) :
         $noteNew = $connexion->prepare('INSERT INTO note (titre,content,user_id) VALUES (:titre , :content , :user_id)');
-        $noteNew->bindValue(':titre', $titre);
-        $noteNew->bindValue(':content', $content);
-        $noteNew->bindValue(':user_id', $user);
+        $noteNew->bindValue(':titre', $titre, PDO::PARAM_STR);
+        $noteNew->bindValue(':content', $content, PDO::PARAM_STR);
+        $noteNew->bindValue(':user_id', $user, PDO::PARAM_STR);
         $noteNew->execute();
 
         header('Location: /notes');
