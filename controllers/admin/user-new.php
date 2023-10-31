@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     // Sanitize   
-    $name = trim(filter_var($_POST['name'], FILTER_SANITIZE_NUMBER_INT));
+    $name = trim(filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $email = trim(filter_var($_POST['email'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 
     //errors    
