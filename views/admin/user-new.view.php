@@ -13,7 +13,7 @@
 
         <label class="black-text" for="email">Email :</label>
         <div class="white">
-            <input type="text" name="email" id="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
+            <input type="email" name="email" id="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
         </div>
 
         <div style="margin: 30px auto;">
