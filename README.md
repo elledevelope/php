@@ -85,3 +85,5 @@ $connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass, [PDO::MY
 --------------------
 31.10.23:
 [How to Insert Form Data into Database using PHP ?](https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/)
+
+[PHP Registration Form](https://www.phptutorial.net/php-tutorial/php-registration-form/)
