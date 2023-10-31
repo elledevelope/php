@@ -11,6 +11,7 @@ $routes = [
     '/dashborad' => 'controllers/admin/dashborad.php',
     '/user-new' => 'controllers/admin/user-new.php',
     '/admin' => 'controllers/admin/index.php',
+    '/admin/users' => 'controllers/admin/users.php',
 
 ];
 // dbug($routes);
