@@ -8,7 +8,7 @@ $routes = [
     '/note-delete' => 'controllers/note-delete.php',
     '/note-new' => 'controllers/note-new.php',
     '/note-update' => 'controllers/note-update.php',
-    '/dashborad' => 'controllers/dashborad.php',
+    '/dashborad' => 'controllers/admin/dashborad.php',
 
 ];
 // dbug($routes);

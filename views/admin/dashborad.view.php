@@ -1,4 +1,4 @@
-<?php require 'partials/header.php';
+<?php require 'views/partials/header.php';
 // dbug($notes);
 ?>
 
@@ -30,7 +30,7 @@
 
                 <p><a style="width: 150px;" href="/note-delete?id=<?= $note['id'] ?>" onClick="return confirm('Etes vous certain de vouloir supprimer cette note !?');" class="btn brand red lighten-1 ">Supprimer</a></p>
 
-                <p><a style="width: 150px;" href="/notes" class="btn">Retour</a></p>
+                <p><a style="width: 150px;" href="/notes" class="btn">Voir</a></p>
             </td>
             </tr>
 
@@ -41,4 +41,4 @@
 </table>
 
 
-<?php require 'partials/footer.php'; ?>
+<?php require 'views/partials/footer.php'; ?>
