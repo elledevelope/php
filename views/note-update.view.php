@@ -32,7 +32,7 @@
               };
             
             
-            if (isset($_POST['user']) && ($user === $user['user_id'])) : ?>     
+            if (isset($user_id) && ($user_id === $user['user_id'])) : ?>     
                 selected 
                 
             <?php endif; ?>
