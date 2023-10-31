@@ -14,7 +14,7 @@ $routes = [
     '/admin/users' => 'controllers/admin/users.php',
     '/user-new' => 'controllers/admin/user-new.php',
     '/admin/user-delete' => 'controllers/admin/user-delete.php',
-    
+    '/admin/user' => 'controllers/admin/user.php',
 
 ];
 // dbug($routes);
