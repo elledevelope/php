@@ -22,10 +22,17 @@
         foreach ($users as $user) : ?>
             <tr>
                 <td><?= $i ?></td>
+
                 <td><?php echo $user['user_id']; ?></td>
+
                 <td><?php echo $user['name']; ?></td>
+
                 <td><?php echo $user['email']; ?></td>
+
                 <td></a><a href="/admin/user-delete?id=<?=$user['user_id']?>" onClick="return confirm('Etes-vous certain de vouloir supprimer cet utilisateur?');"> <span class="waves-effect  red lighten-1 btn">x</span></a></td>
+                <td>
+                <a  class="btn" href="/admin/user" style="cursor: pointer;">Modifier utilisateur</a>
+                </td>
 
                
             </tr>
