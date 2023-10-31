@@ -82,3 +82,6 @@ $connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass, [PDO::MY
 
      if (isset($_POST['user']) && ($_POST['user'] == $user['user_id'])) :
 
+--------------------
+31.10.23:
+[How to Insert Form Data into Database using PHP ?](https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/)
