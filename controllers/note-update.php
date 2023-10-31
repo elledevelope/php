@@ -9,7 +9,7 @@ $users = $connexion->query($requete)->fetchAll();
 
 
 //NOTE:
-if ( !isset($_GET['id']) || !is_numeric($_GET['id']) || empty($_GET['id']) ) :
+if (!isset($_GET['id']) || !is_numeric($_GET['id']) || empty($_GET['id'])) :
     abort();
 endif;
 
@@ -31,9 +31,9 @@ $noteUpdate->bindParam(':id', $id);
 
 $noteUpdate->execute();
 
-$noteUpdate = $noteUpdate->fetch(); 
+$noteUpdate = $noteUpdate->fetch();
 
-if ( empty($noteUpdate) || $noteUpdate === false ) :
+if (empty($noteUpdate) || $noteUpdate === false) :
     abort();
 endif;
 ///////////////////////////////////////////////
@@ -71,38 +71,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
         $errors[] = 'Aucun auteur séléctionné!!!';
     endif;
 
-    /*     if (strlen($titre) >= 100 || strlen($titre) === 0) :
-        $errors[] = 'Titre trop long !!!';
-    endif; */
-
-    /*     if (strlen($titre) >= 100 || strlen($titre) === 0) :
-        $errors[] = 'Titre trop long !!!';
-    endif;
-
-    if (strlen($content) >= 100 || strlen($content) === 0) :
-        $errors[] = 'Contenue trop long bouuuu !!!';
-    endif; */
-
-    /*     if (strlen($titre) >= 100 || strlen($titre) === 0 || strlen($content) >= 1000 || strlen($content) === 0) :
-        $errors = 'Le titre ou le contenue de votre note est incorrect !!!';
-    endif; */
 
     if (empty($errors)) :
-        $noteNew = $connexion->prepare('INSERT INTO note (titre,content,user_id) VALUES (:titre , :content , :user_id)');
-        $noteNew->bindValue(':titre', $titre, PDO::PARAM_STR); //PDO::PARAM_STR - precise what we whan it in string format
-        $noteNew->bindValue(':content', $content, PDO::PARAM_STR);
-        $noteNew->bindValue(':user_id', $user, PDO::PARAM_STR);
-        $noteNew->execute();
+        //SQL statement for an update operation on a database:
+        $noteNewUpdate = $connexion->prepare('UPDATE note SET titre = :titre , content = :content , user_id = :user_id WHERE id = :id');
 
+        $noteNewUpdate->bindValue(':titre', $titre, PDO::PARAM_STR); //PDO::PARAM_STR - precise what we want it in a string format
+        $noteNewUpdate->bindValue(':content', $content, PDO::PARAM_STR);
+        $noteNewUpdate->bindValue(':user_id', $user, PDO::PARAM_STR);
+        $noteNewUpdate->bindValue(':id', $id, PDO::PARAM_STR);
+        $noteNewUpdate->execute();
 
-
-        $lastInsertId = $connexion->lastInsertId();
-        if ($lastInsertId) :
-            header('Location: /notes');
-            exit();
-        else :
-            abort();
-        endif;
+        header('Location: /notes');
+        exit();
     endif;
 endif;
 
