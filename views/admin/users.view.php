@@ -19,15 +19,15 @@
     <tbody>
         <?php
         $i = 1;
-        foreach ($users as $users) : ?>
+        foreach ($users as $user) : ?>
             <tr>
                 <td><?= $i ?></td>
-                <td><?php echo $users['user_id']; ?></td>
-                <td><?php echo $users['name']; ?></td>
-                <td><?php echo $users['email']; ?></td>
-                <td>
+                <td><?php echo $user['user_id']; ?></td>
+                <td><?php echo $user['name']; ?></td>
+                <td><?php echo $user['email']; ?></td>
+                <td></a><a href="/admin/user-delete?id=<?=$user['user_id']?>" onClick="return confirm('Etes-vous certain de vouloir supprimer cet user?');"> <span class="waves-effect  red lighten-1 btn">x</span></a></td>
 
-            </td>
+               
             </tr>
         <?php
             $i = $i + 1;
