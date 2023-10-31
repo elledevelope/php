@@ -1,5 +1,5 @@
-<?php require 'partials/header.php' ?>
+<?php require 'partialsAdmin/header.php' ?>
 
-<h2>admin Index.view.php</h2>
+<h2>admin Index.view</h2>
 
-<?php require 'partials/footer.php' ?>
+<?php require 'partialsAdmin/footer.php' ?>
