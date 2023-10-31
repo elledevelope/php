@@ -7,17 +7,21 @@
 <?php dbug($noteUpdate); ?>
 
 
-
+<section style="width:1200px; margin:auto">
 <form method="POST">
-    <label for="titre">Titre :</label>
+    <label class="black-text" for="titre">Titre :</label>
+    <div class="white">
     <input type="text" name="titre" id="titre" value="<?= isset($_POST['titre']) ? $_POST['titre'] : $noteUpdate['titre'] ?>">
+    </div>
 
-    <label for="content">Contenu :</label>
+    <label class="black-text" for="content">Contenu :</label>
+    <div class="input-field white">
     <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] :  $noteUpdate['content']  ?></textarea> 
+    </div>
 
 
-    <label for="user">Auteur :</label>
-    <select name="user" id="user">
+    <label class="black-text" for="user">Auteur :</label>
+    <select class="browser-default" name="user" id="user">
 
         <option value=""></option>
 
@@ -45,8 +49,12 @@
         <!-------------------------------------->
     </select>
 
-    <input id="btn" type="submit" value="Modifier">
+    <div style="margin: 30px auto;">
+    <input  class="btn brand z-depth-0"  id="btn" type="submit" value="Modifier">
+    </div>
+
 </form>
+</section>
 
 
 
