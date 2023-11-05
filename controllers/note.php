@@ -5,7 +5,7 @@ require 'models/Database.php';
 
 // dd($_GET);
 /* 
- if(!isset($_GET['id']) || !is_numeric($_GET['id'])) : //escaping any sensitive characters to protect our database
+ if(!isset($_GET['id']) || !is_numeric($_GET['id'])) : 
     abort();
 endif;
 
@@ -14,7 +14,7 @@ if (empty($note) )  :
 endif;
 */
 
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) :
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])) : // escaping any sensitive characters to protect our database
   abort();
 endif;
 
@@ -23,7 +23,7 @@ $id = $_GET['id'];
 $note = $connexion->prepare('SELECT * FROM `note` AS n
 INNER JOIN user AS u 
 ON n.user_id = u.user_id
-WHERE n.id= :id'); 
+WHERE n.id= :id');  // select any record ` WHERE id = $id ` (id in url)
 
 $note->bindParam(':id',$id);
 $note->execute();
