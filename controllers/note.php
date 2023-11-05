@@ -5,7 +5,7 @@ require 'models/Database.php';
 
 // dd($_GET);
 /* 
- if(!isset($_GET['id']) || !is_numeric($_GET['id'])) :
+ if(!isset($_GET['id']) || !is_numeric($_GET['id'])) : //escaping any sensitive characters to protect our database
     abort();
 endif;
 
