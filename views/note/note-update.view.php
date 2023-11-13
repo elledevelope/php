@@ -8,52 +8,54 @@
 
 
 <section style="width:1200px; margin:auto">
-<form method="POST">
-    <label class="black-text" for="titre">Titre :</label>
-    <div class="white">
-    <input type="text" name="titre" id="titre" value="<?= isset($_POST['titre']) ? $_POST['titre'] : $noteUpdate['titre'] ?>">
-    </div>
+    <form method="POST" enctype="multipart/form-data"> <!--------------  enctype="multipart/form-data" for IMG UPLOAD------------------->
+        <!------------------------------------------------------------- TITRE --------------------------------------------------------------->
+        <label class="black-text" for="titre">Titre :</label>
+        <div class="white">
+            <input type="text" name="titre" id="titre" value="<?= isset($_POST['titre']) ? $_POST['titre'] : $noteUpdate['titre'] ?>">
+        </div>
 
-    <label class="black-text" for="content">Contenu :</label>
-    <div class="input-field white">
-    <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] :  $noteUpdate['content']  ?></textarea> 
-    </div>
+        <!-------------------------------------------------------- CONTENUE ---------------------------------------------------------------->
+        <label class="black-text" for="content">Contenu :</label>
+        <div class="input-field white">
+            <textarea name="content" id="content" cols="30" rows="10"><?= isset($_POST['content']) ? $_POST['content'] :  $noteUpdate['content']  ?></textarea>
+        </div>
 
 
-    <label class="black-text" for="user">Auteur :</label>
-    <select class="browser-default" name="user" id="user">
+        <!-------------------------------------------------------- AUTHEUR ---------------------------------------------------------------->
+        <label class="black-text" for="user">Auteur :</label>
+        <select class="browser-default" name="user" id="user">
 
-        <option value=""></option>
+            <option value=""></option>
 
-        <?php foreach ($users as $user) : ?>
-            <option value="<?= $user['user_id'] ?>" 
+            <?php foreach ($users as $user) : ?>
+                <option value="<?= $user['user_id'] ?>" <?php
+                                                        if (isset($_POST['user'])) {
+                                                            $user_id = (int) $_POST['user'];
+                                                        } else {
+                                                            $user_id = (int) $noteUpdate['user_id'];
+                                                        };
 
-            <?php 
-            if(isset($_POST['user'])) {
-                $user_id = (int) $_POST['user'];}
-             else { 
-                $user_id = (int) $noteUpdate['user_id'];
-              };
-            
-            
-            if (isset($user_id) && ($user_id === $user['user_id'])) : ?>     
-                selected 
-                
-            <?php endif; ?>
-            >
-            
-            <?= $user['name'] ?>
 
-            </option>
-        <?php endforeach; ?>
-        <!-------------------------------------->
-    </select>
+                                                        if (isset($user_id) && ($user_id === $user['user_id'])) : ?> selected <?php endif; ?>>
 
-    <div style="margin: 30px auto;">
-    <input  class="btn brand z-depth-0"  id="btn" type="submit" value="Modifier">
-    </div>
+                    <?= $user['name'] ?>
 
-</form>
+                </option>
+            <?php endforeach; ?>
+        </select>
+
+        <!---------------------------------------------------------- IMG UPLOAD ------------------------------------------------------------->
+        <br>
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image">
+
+        <!------------------------------------------------------- SUBMIT BTN ---------------------------------------------------------------->
+        <div style="margin: 30px auto;">
+            <input class="btn brand z-depth-0" id="btn" type="submit" value="Modifier">
+        </div>
+
+    </form>
 </section>
 
 
