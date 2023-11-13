@@ -7,4 +7,4 @@ $notes = $connexion->query('SELECT * FROM note ORDER BY id DESC')->fetchAll(); /
 // dd($notes);
 
 
-require 'views/notes.view.php';
+require 'views/note/notes.view.php';

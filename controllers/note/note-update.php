@@ -87,4 +87,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     endif;
 endif;
 
-include 'views/note-update.view.php';
+include 'views/note/note-update.view.php';

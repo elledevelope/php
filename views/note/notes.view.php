@@ -1,4 +1,4 @@
-<?php require 'partials/header.php';  ?>
+<?php require 'views/partials/header.php';  ?>
 
 <h2>Notes :</h2>
     <ul style="height: 300px; display: flex; flex-direction: column; flex-wrap: wrap;" id="notes-view-ul">
@@ -21,7 +21,7 @@ endforeach;
         <a class="btn brand z-depth-0"  href="/note-new">Ajouter une note</a>
 </div>
 
-<?php require 'partials/footer.php';  ?>
+<?php require 'views/partials/footer.php';  ?>
 
 
 

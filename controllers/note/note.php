@@ -46,4 +46,4 @@ $note->execute();
 $note = $note->fetch(PDO::FETCH_ASSOC); //method is called on the prepared statement to retrieve one row of data from the result set in the form of an associative array. The PDO::FETCH_ASSOC option specifies that you want the data organized in the form of an associative array, where column names are associated with their values.
   */
 
-require 'views/note.view.php';
+require 'views/note/note.view.php';

@@ -1,4 +1,4 @@
-<?php require 'partials/header.php';
+<?php require 'views/partials/header.php';
 // dbug($users);
 ?>
 
@@ -58,7 +58,7 @@
 
 
 
-<?php require 'partials/footer.php';
+<?php require 'views/partials/footer.php';
 
 if (isset($errors) && !empty($errors)) : //isset — Determine if a variable is declared and is different than null
     foreach ($errors as $error) :

@@ -1,4 +1,4 @@
-<?php require 'partials/header.php' ?>
+<?php require 'views/partials/header.php' ?>
 
 <h2><?= $note['titre'] ?></h2>
 <p><?= $note['content'] ?></p>
@@ -10,4 +10,4 @@
 <p><a href="/note-delete?id=<?=$note['id']?>" onClick="return confirm('Etes vous certain de vouloir supprimer cette note !?');" class="btn brand red lighten-1 ">Supprimer cette note</a></p>
 
 <p><a href="/notes" class="btn">Retour à la liste des notes</a></p>
-<?php require 'partials/footer.php' ?>
+<?php require 'views/partials/footer.php' ?>
