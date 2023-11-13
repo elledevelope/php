@@ -88,5 +88,21 @@ $connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass, [PDO::MY
 
 [PHP Registration Form](https://www.phptutorial.net/php-tutorial/php-registration-form/)
 
+---------------------
+13.11.23:
 # delete several notes:
 sql = SELECT * FROM `note` WHERE id in (43, 56); , instead of "delete" btn in dashboard put select box
+
+---
+
+[C.R.U.D](https://fr.wikipedia.org/wiki/CRUD#:~:text=selon%20les%20recommandations%20des%20projets,informations%20en%20base%20de%20donn%C3%A9es.)
+
+---
+
+## Ce qui faut savoir:
+- Définition d'une route
+- Définition d'un controller
+- Définition d'une vue
+- Passer et récuper un paramétre à une route
+- Sécurité : SQL Injection (ex: bindValue)
+- Sécurité : Faille XSS (Cross-Site Scripting) - ex:  $titre = trim(filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
