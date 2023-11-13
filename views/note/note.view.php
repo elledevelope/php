@@ -1,9 +1,12 @@
 <?php require 'views/partials/header.php' ?>
 
+
 <h2><?= $note['titre'] ?></h2>
 <p><?= $note['content'] ?></p>
 
+<?php if ($note['image']) : ?>
 <div id="image"><img  style="width: 30%;" src="/uploads/<?php echo $note['image'] ?>" alt="image"></div>  <!--  //added image -->
+<?php endif;  ?>
 
 <p class=" grey-text text-darken-1">Publiée le <?= $note['created_at'] ?> par <span style="font-weight: 700;"><?= $note['name'] ?></span></p>
 
