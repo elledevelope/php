@@ -9,7 +9,7 @@ $routes = [
     '/note-new' => 'controllers/note-new.php',
     '/note-update' => 'controllers/note-update.php',
 
-    '/dashboard' => 'controllers/admin/dashborad.php',
+    '/dashboard' => 'controllers/admin/dashboard.php',
     '/admin' => 'controllers/admin/index.php',
     '/admin/users' => 'controllers/admin/users.php',
     '/user-new' => 'controllers/admin/user-new.php',

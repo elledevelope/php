@@ -5,4 +5,4 @@ require 'models/Database.php';
 $notes = $connexion->query('SELECT * FROM note ORDER BY id DESC')->fetchAll(); 
 
 
-require 'views/admin/dashborad.view.php';
+require 'views/admin/dashboard.view.php';
