@@ -61,7 +61,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
         };
     };
 
-
+//Mehdi:
+// $target_dir = "uploads/";
+// $target_file = $target_dir . basename($_FILES["image"]["name"]);
+// if (move_upload_file($_FILES["image"]["tmp_name"], $uploadfile)):
+//     $imageInsert = basename($_FILES["image"]["name"]);
+// else:
+//     $errors [] = "Erreur d'upload de votre image!";
+// endif;
 
 
     if (empty($errors)) :
