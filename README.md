@@ -106,3 +106,5 @@ sql = SELECT * FROM `note` WHERE id in (43, 56); , instead of "delete" btn in da
 - Passer et récuper un paramétre à une route
 - Sécurité : SQL Injection (ex: bindValue)
 - Sécurité : Faille XSS (Cross-Site Scripting) - ex:  $titre = trim(filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+
+# $ git rev-list --count --all
