@@ -87,3 +87,6 @@ $connexion = new PDO('mysql:host=localhost;dbname=notes', $user, $pass, [PDO::MY
 [How to Insert Form Data into Database using PHP ?](https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/)
 
 [PHP Registration Form](https://www.phptutorial.net/php-tutorial/php-registration-form/)
+
+# delete several notes:
+sql = SELECT * FROM `note` WHERE id in (43, 56); , instead of "delete" btn in dashboard put select box
