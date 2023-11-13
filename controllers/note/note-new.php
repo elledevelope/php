@@ -14,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     $titre = trim(filter_var($_POST['titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $content = trim(filter_var($_POST['content'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $user = trim(filter_var($_POST['user'], FILTER_SANITIZE_NUMBER_INT));
+    $image = trim(filter_var($_FILES["image"]["name"], FILTER_SANITIZE_NUMBER_INT));
+
 
     //Validate input lengths and other conditions
     if (strlen($titre) === 0) :
@@ -36,29 +38,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
         $errors[] = 'Aucun auteur séléctionné!!!';
     endif;
 
-    /*     if (strlen($titre) >= 100 || strlen($titre) === 0) :
-        $errors[] = 'Titre trop long !!!';
-    endif; */
+    // -------------------------------------------------IMAGE
 
-    /*     if (strlen($titre) >= 100 || strlen($titre) === 0) :
-        $errors[] = 'Titre trop long !!!';
-    endif;
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    if (strlen($content) >= 100 || strlen($content) === 0) :
-        $errors[] = 'Contenue trop long bouuuu !!!';
-    endif; */
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+        // Handle the error as needed
+    } else {
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+            echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
 
-    /*     if (strlen($titre) >= 100 || strlen($titre) === 0 || strlen($content) >= 1000 || strlen($content) === 0) :
-        $errors = 'Le titre ou le contenue de votre note est incorrect !!!';
-    endif; */
+            // Store the file name in the database
+            $image = htmlspecialchars(basename($_FILES["image"]["name"]));
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+            // Handle the error as needed
+        };
+    };
+
+
+
 
     if (empty($errors)) :
-        $noteNew = $connexion->prepare('INSERT INTO note (titre,content,user_id) VALUES (:titre , :content , :user_id)');
+        $noteNew = $connexion->prepare('INSERT INTO note (titre,content,user_id,image) VALUES (:titre, :content, :user_id, :image)');
+
         $noteNew->bindValue(':titre', $titre, PDO::PARAM_STR); //PDO::PARAM_STR - precise what we whan it in string format
         $noteNew->bindValue(':content', $content, PDO::PARAM_STR);
-        $noteNew->bindValue(':user_id', $user, PDO::PARAM_STR);
-        $noteNew->execute();
+        // $noteNew->bindValue(':user_id', $user, PDO::PARAM_STR);
+        $noteNew->bindValue(':user_id', $user, PDO::PARAM_INT);
+        $noteNew->bindParam(':image', $image, PDO::PARAM_STR);
 
+        $noteNew->execute();
 
 
         $lastInsertId = $connexion->lastInsertId();
