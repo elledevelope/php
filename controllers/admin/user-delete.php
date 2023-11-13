@@ -14,5 +14,5 @@ $users->bindParam(':user_id', $id, PDO::PARAM_INT);
 $users->execute();
 
 
-header('Location: //admin/users');
+header('Location: /admin/users');
 exit();
