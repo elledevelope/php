@@ -4,15 +4,7 @@ require 'models/Database.php';
 
 
 // dd($_GET);
-/* 
- if(!isset($_GET['id']) || !is_numeric($_GET['id'])) :
-    abort();
-endif;
 
-if (empty($note) )  :
-    abort();
-endif;
-*/
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) :
   abort();
