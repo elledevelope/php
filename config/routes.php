@@ -16,5 +16,8 @@ $routes = [
     '/admin/user-delete' => 'controllers/admin/user-delete.php',
     '/admin/user' => 'controllers/admin/user.php',
 
+    '/login' => 'controllers/login.php',
+
+
 ];
 // dbug($routes);
