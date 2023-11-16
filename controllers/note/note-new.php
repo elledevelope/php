@@ -48,8 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
-        // Handle the error as needed
-    } else {
+       } else {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
             echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
 
@@ -57,7 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
             $image = htmlspecialchars(basename($_FILES["image"]["name"]));
         } else {
             echo "Sorry, there was an error uploading your file.";
-            // Handle the error as needed
         };
     };
 

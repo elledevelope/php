@@ -7,11 +7,11 @@
 <?php dbug($noteUpdate); ?>
 
 
-<section style="width:1200px; margin:auto">
+<section>
     <form method="POST" enctype="multipart/form-data"> <!--------------  enctype="multipart/form-data" for IMG UPLOAD------------------->
         <!------------------------------------------------------------- TITRE --------------------------------------------------------------->
         <label class="black-text" for="titre">Titre :</label>
-        <div class="white">
+        <div class="input-field white">
             <input type="text" name="titre" id="titre" value="<?= isset($_POST['titre']) ? $_POST['titre'] : $noteUpdate['titre'] ?>">
         </div>
 
@@ -49,13 +49,18 @@
         <?php if ($noteUpdate['image']) : ?>
             <p><img src="uploads/<?= $noteUpdate['image'] ?>" alt=""></p>
         <?php endif; ?>
-        <label for="image">Image</label>
+        <label class="black-text"  for="image">Image:</label> <br>
         <input type="file" name="image" id="image">
 
+
         <!------------------------------------------------------- SUBMIT BTN ---------------------------------------------------------------->
-        <div style="margin: 30px auto;">
-            <input class="btn brand z-depth-0" id="btn" type="submit" value="Modifier">
+        <br>
+        <br>
+        <div>
+            <input class="btn brand" id="btn" type="submit" value="Modifier">
         </div>
+        <br>
+        <br>
 
     </form>
 </section>

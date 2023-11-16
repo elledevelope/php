@@ -12,113 +12,13 @@ input {
   width: 100%;
 }
 
-body {
-  --doc-width: 90%;
-}
-
-/*======================================================== NAV ========================================================= */
-/*======================================================== NAV ========================================================= */
-
-/* h1 {
-  text-align: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
-  color: rgb(139, 53, 124);
-  margin: 10px auto;
-}
-
-#app {
-  text-align: center;
-  font-style: italic;
-  font-weight: 100;
-  color: rgb(62, 52, 71);
-}
-
-#nav {
-  list-style: none;
+.li-notes {
+  padding-bottom: 20px;
   display: flex;
-}
-
-#nav li {
-  padding: 20px;
-  font-size: 1rem;
-}
-
-.header {
-  margin: auto;
-  display: flex;
+  width: 1000px;
   justify-content: space-between;
-  align-items: center;
-  width: var(--doc-width);
 }
 
-#nav a {
-  color: brown;
-  text-decoration: none;
-  font-weight: 600;
+.btn-delete {
+
 }
-
-a {
-  color: brown;
-  text-decoration: none;
-}
-
-h2 {
-  padding: 20px 0;
-} */
-
-/*======================================================== NOTES-VIEW ========================================================= */
-/*======================================================== NOTES-VIEW ========================================================= */
-/* #notes-view-li {
-  padding: 10px 20px;
-  color: black;
-  font-weight: 600;
-}
-
-#ajout-note-btn {
-  background-color: rgba(200, 197, 197, 0.649);
-  padding: 7px 10px;
-  border-radius: 10px;
-  border: 1px solid grey;
-  width: 200px;
-  color: white;
-  text-align: center;
-  margin: 40px;
-}
- */
-/*======================================================== FORM ========================================================= */
-/*======================================================== FORM ========================================================= */
-
-
-
-
-/*======================================================== FOOTER ========================================================= */
-/*======================================================== FOOTER ========================================================= */
-
-/* footer {
-    background-color: bisque;
-    height: 15vh;
-  }
-  
-  footer p {
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    padding-top: 20px;
-  }
-  
-  #icons_rs {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-bottom: 20px;
-  }
-  
-  #icons_rs img {
-    width: 20px;
-    margin: 3px;
-  } */

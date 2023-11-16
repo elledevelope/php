@@ -1,5 +1,6 @@
 <?php
 require 'models/Database.php';
+session_start();
 
 // Fetch user data
 $requete = "SELECT * FROM `user`";

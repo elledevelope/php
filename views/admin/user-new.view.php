@@ -4,7 +4,7 @@
 
 <h2>Créer user</h2>
 
-<section style="width:1200px; margin:auto">
+<section>
     <form method="POST">
         <label class="black-text" for="name">User Name :</label>
         <div class="white">
@@ -17,7 +17,7 @@
         </div>
 
         <div style="margin: 30px auto;">
-            <input class="btn brand z-depth-0" id="btn" type="submit" value="Ajouter">
+            <input class="btn brand" id="btn" type="submit" value="Ajouter">
         </div>
     </form>
 </section>

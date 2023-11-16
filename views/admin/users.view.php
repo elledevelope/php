@@ -4,7 +4,10 @@
 
 <h2>Users List :</h2> 
 
-<p><a class="btn brand z-depth-0"  href="/user-new">Créer user</a></p>
+<p><a class="btn brand"  href="/user-new">Créer user</a></p>
+
+<div class="row">
+    <div class="col s12">
 
 <table border="1">
     <thead>
@@ -41,6 +44,9 @@
         endforeach; ?>
     </tbody>
 </table>
+
+</div>
+</div>
 
 <?php require 'partialsAdmin/footer.php' ?>
 

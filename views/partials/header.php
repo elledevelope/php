@@ -12,4 +12,4 @@
 
 <body class="card-panel brown lighten-3"  style="margin: 0; padding: 0;">
 
-    <?php include 'nav.php' ?>
+<?php include 'nav.php' ?>

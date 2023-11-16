@@ -45,12 +45,12 @@
 
         <!---------------------------------------------------------- IMG UPLOAD ------------------------------------------------------------->
         <br>
-        <label for="image">Image</label>
+        <label class="black-text"  for="image">Image:</label> <br>
         <input type="file" name="image" id="image">
 
         <!------------------------------------------------------- SUBMIT BTN ---------------------------------------------------------------->
         <div style="margin: 30px auto;">
-            <input class="btn brand z-depth-0" id="btn" type="submit" value="Ajouter">
+            <input class="btn brand" id="btn" type="submit" value="Ajouter">
         </div>
 
     </form>

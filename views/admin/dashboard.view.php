@@ -1,4 +1,5 @@
-<?php require 'views/partials/header.php';
+<?php //require 'views/partials/header.php';
+require 'partialsAdmin/header.php'
 // dbug($notes);
 ?>
 
