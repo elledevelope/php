@@ -1,12 +1,13 @@
 <?php
-//COOKIE
-$value = 'Valeur de test';
+session_start(); // session_start() is always on top of a page
 
-// setcookie("TestCookie", $value);
-// setcookie("TestCookie", $value, time()+3600);  //3600sec = 1h
-setcookie("TestCookie", $value, time()-3600);  // negative time is used to delete cookie
+// $_SESSION['CouleurFavorite'] = 'vert';
+$_SESSION['isConnected'] = true;
 
-echo $_COOKIE["TestCookie"];
+?>
 
 
-//SESION
+
+
+<p><a href="./session.php">Lira la variable session</a></p>
+<p><a href="./kill_session.php">Tuer la session</a></p>
