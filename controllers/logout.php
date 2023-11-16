@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//deconnextion
+//deconnextion:
 $_SESSION = [];
 session_unset(); 
 session_destroy();
