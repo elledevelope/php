@@ -6,7 +6,7 @@ require 'partialsAdmin/header.php'
 <h2>Dashborad</h2>
 
 
-<table border="1">
+<table class="highlight" border="1">
     <thead>
         <tr>
             <th>#</th>

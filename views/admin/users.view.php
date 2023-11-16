@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col s12">
 
-<table border="1">
+<table class="highlight" border="1">
     <thead>
         <tr>
             <th>#</th>

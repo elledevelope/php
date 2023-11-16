@@ -14,9 +14,6 @@ input {
 
 .li-notes {
   padding-bottom: 20px;
-  display: flex;
-  width: 1000px;
-  justify-content: space-between;
 }
 
 .btn-delete {
