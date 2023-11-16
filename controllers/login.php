@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require 'models/Database.php';
 
 
@@ -31,12 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') :
             //SESSION
             $_SESSION['isLogged'] = true;
             $_SESSION['userId'] = $loginUser['user_id'];
+            $_SESSION['userRole'] = $loginUser['user_role'];
 
             header('Location: /notes');
 
         endif;
 
-        dd($loginUser);
+        // dd($loginUser);
 
 
     endif;

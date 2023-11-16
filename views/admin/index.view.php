@@ -1,5 +1,7 @@
 <?php require 'partialsAdmin/header.php' ?>
 
-<h2>admin Index.view</h2>
+<div class="container" style="height:50vh;">
+<h2 class="center-align">admin Index.view</h2>
+</div>
 
 <?php require 'partialsAdmin/footer.php' ?>

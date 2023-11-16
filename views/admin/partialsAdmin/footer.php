@@ -1,24 +1,11 @@
 <footer>
-    <div id="icons_rs">
-        <div id="rs-img">
-            <img src="./assets/icons/insta.svg" alt="" />
-        </div>
+    <hr>
 
-        <div id="rs-img">
-            <img src="./assets/icons/twitter-square.svg" alt="" />
-        </div>
-
-        <div id="rs-img">
-            <img src="./assets/icons/facebook-square.svg" alt="" />
-        </div>
-
-        <div id="rs-img">
-            <img src="./assets/icons/snapchat-square.svg" alt="" />
-        </div>
+    <div class="container">
+        <p class="right-align grey-text text-darken-2">Notes 2023. All rights reserved</p>
     </div>
+
 </footer>
 </body>
-
-</div>
 
 </html>

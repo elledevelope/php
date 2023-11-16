@@ -1,9 +1,8 @@
 <?php require 'views/partials/header.php';
 ?>
-
-<h2>Connextion</h2>
-
-<section>
+<section class="container">
+    <h2>Connextion</h2>
+    
     <form method="POST">
 
         <!------------------------------------------------------------- email --------------------------------------------------------------->
@@ -27,7 +26,7 @@
 
 
 
-if (isset($errors) && !empty($errors)) : 
+if (isset($errors) && !empty($errors)) :
     foreach ($errors as $error) :
 ?>
         <p class="error"><?= $error ?></p>

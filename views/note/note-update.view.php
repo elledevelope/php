@@ -7,7 +7,7 @@
 <?php dbug($noteUpdate); ?>
 
 
-<section>
+<section class="container">
     <form method="POST" enctype="multipart/form-data"> <!--------------  enctype="multipart/form-data" for IMG UPLOAD------------------->
         <!------------------------------------------------------------- TITRE --------------------------------------------------------------->
         <label class="black-text" for="titre">Titre :</label>

@@ -3,10 +3,9 @@
 // dbug($users);
 ?>
 
-<h2>Ajout d'une nouvelle note</h2>
+<section class="container" style="width:1200px; margin:auto">
+    <h2>Ajout d'une nouvelle note</h2>
 
-
-<section style="width:1200px; margin:auto">
     <form method="POST" enctype="multipart/form-data"> <!--------------  enctype="multipart/form-data" for IMG UPLOAD------------------->
 
         <!------------------------------------------------------------- TITRE --------------------------------------------------------------->
@@ -45,7 +44,7 @@
 
         <!---------------------------------------------------------- IMG UPLOAD ------------------------------------------------------------->
         <br>
-        <label class="black-text"  for="image">Image:</label> <br>
+        <label class="black-text" for="image">Image:</label> <br>
         <input type="file" name="image" id="image">
 
         <!------------------------------------------------------- SUBMIT BTN ---------------------------------------------------------------->

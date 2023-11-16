@@ -2,9 +2,9 @@
 // dbug($users);
 ?>
 
-<h2>Créer user</h2>
-
-<section>
+<section class="container">
+    <h2>Créer user</h2>
+    
     <form method="POST">
         <label class="black-text" for="name">User Name :</label>
         <div class="white">

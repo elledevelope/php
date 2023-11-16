@@ -17,6 +17,7 @@ $routes = [
     '/admin/user' => 'controllers/admin/user.php',
 
     '/login' => 'controllers/login.php',
+    '/logout' => 'controllers/logout.php',
 
 
 ];
